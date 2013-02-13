@@ -1,0 +1,33 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "views": [
+            "Main",
+            "LoginPanel",
+            "Dashboard",
+            "Schedule"
+        ],
+        "name": "Google"
+    },
+    "id": "ExtBox1-ext-gen1580",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "viewport",
+            "reference": {
+                "name": "viewport",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "Viewport"
+            },
+            "designerId": "69975638-f316-4e75-a91b-ee988547dd18"
+        }
+    ]
+}

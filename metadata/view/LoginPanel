@@ -1,0 +1,131 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "refs": "#loginform",
+        "designer|userClassName": "LoginPanel",
+        "designer|userAlias": "LoginPanel",
+        "requires": [
+            "Ext.field.Text",
+            "Ext.field.Password",
+            "Ext.MessageBox"
+        ],
+        "designer|initialView": true,
+        "html": null,
+        "id": "loginform",
+        "itemId": "loginform"
+    },
+    "id": "ExtBox1-ext-gen8066",
+    "designerId": "6730d4b8-32a2-4af2-ab8e-3fe35e0ded34",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "refs",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer",
+                "html": "Welcome to Zeitgeist 2013.<br /><br /> <small>To proceed you must have a valid username and password sent to you in your welcome email.</small>",
+                "padding": 10,
+                "style": "margin-bottom:20px;"
+            },
+            "designerId": "2ae84565-e020-4656-b6d2-f4b1c9a5f421"
+        },
+        {
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTextField",
+                "style": "border-radius:10px;",
+                "label": "User",
+                "name": "username"
+            },
+            "designerId": "dbcec645-54bc-4a05-9f93-ff31b3c18557"
+        },
+        {
+            "type": "passwordfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPasswordField",
+                "style": "margin-top:20px; border-radius:10px;",
+                "label": "Pass",
+                "name": "password"
+            },
+            "designerId": "cbbb17eb-37aa-4c69-ad3a-5d5cb922807c"
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton",
+                "itemId": "submitLoginForm",
+                "style": "margin-top:20px;",
+                "ui": "confirm",
+                "text": "Login"
+            },
+            "designerId": "8bf73347-b443-468d-b878-fe12981ecc28",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "submitLoginForm",
+                        "fn": "submitLoginForm",
+                        "implHandler": [
+                            "var values = this.getValues();",
+                            "",
+                            "this.submit({",
+                            "    url: 'http://192.168.0.12:8888/web/checkLogin.php',",
+                            "    method: 'POST',",
+                            "    success: function(response) {",
+                            "        // do whatever you need to with the generated HTML",
+                            "        //window.location = 'app.html';",
+                            "        //this.up('Main').push({ title: 'Dashboard', xtype: 'Dashboard'});",
+                            "",
+                            "",
+                            "        Ext.Viewport.setActiveItem('Main');",
+                            "",
+                            "    },",
+                            "    failure: function(response){",
+                            "        // Do failure message",
+                            "        Ext.Msg.alert('Login Failed', \"Sorry, we couldn't log you in. Please check your details and try again.\");",
+                            "    }",
+                            "});"
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "143134ba-019d-45a8-a1a1-c96609b90893"
+                }
+            ]
+        }
+    ]
+}

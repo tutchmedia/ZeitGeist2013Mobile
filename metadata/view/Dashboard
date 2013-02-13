@@ -1,0 +1,56 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Dashboard",
+        "designer|userAlias": "Dashboard",
+        "html": null,
+        "padding": 20,
+        "layout": "card"
+    },
+    "id": "ExtBox1-ext-gen8978",
+    "designerId": "d9a8a4ef-247c-4565-b7e4-b848db91f1ea",
+    "cn": [
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton1",
+                "height": 60,
+                "itemId": "mybutton1",
+                "text": "MyButton1"
+            },
+            "designerId": "cd3c5654-a8f3-4ced-9d78-6ebdd387cc76",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMybutton1Tap",
+                        "fn": "onMybutton1Tap",
+                        "implHandler": [
+                            "this.up('Main').push({",
+                            "    title: 'Agenda',",
+                            "    xtype: 'Schedule'",
+                            "});"
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "9e8733ef-f691-4e8c-9a2d-41fc41d5ed0f"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Schedule",
+        "designer|userAlias": "Schedule"
+    },
+    "id": "ExtBox1-ext-gen23369",
+    "designerId": "06f87b5d-2324-4952-88be-21a16e0b621d"
+}
