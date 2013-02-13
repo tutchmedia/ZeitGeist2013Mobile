@@ -29,8 +29,8 @@ Ext.define('Google.view.MyDataItem', {
                 tpl: [
                     '<div class="attendeesRow">',
                     '    <div class="attendee-name">{full_name}</div>',
-                    '    <small>{j_title}</small><br />',
-                    '    <small>{company}</small>   ',
+                    '    <small>{company}</small><br />',
+                    '    <small>{j_title}</small>   ',
                     '</div>'
                 ],
                 width: '75%'

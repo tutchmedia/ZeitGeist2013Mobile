@@ -44,8 +44,8 @@
                         "implHandler": [
                             "<div class=\"attendeesRow\">\r",
                             "    <div class=\"attendee-name\">{full_name}</div>\r",
-                            "    <small>{j_title}</small><br />\r",
-                            "    <small>{company}</small>   \r",
+                            "    <small>{company}</small><br />\r",
+                            "    <small>{j_title}</small>   \r",
                             "</div>"
                         ],
                         "designer|displayName": "tpl"
