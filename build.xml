@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project name="Zeitgeist" default=".help">
+<project name="Google" default=".help">
     <import file="${basedir}/.sencha/app/build-impl.xml"/>
 
     <!--

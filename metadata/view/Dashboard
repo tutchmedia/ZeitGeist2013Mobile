@@ -8,49 +8,623 @@
     "userConfig": {
         "designer|userClassName": "Dashboard",
         "designer|userAlias": "Dashboard",
+        "requires": [
+            "Ext.Img"
+        ],
         "html": null,
-        "padding": 20,
-        "layout": "card"
+        "id": "Dashboard",
+        "padding": null,
+        "style": "background-color:#fff;",
+        "layout": null,
+        "scrollable": false
     },
-    "id": "ExtBox1-ext-gen8978",
-    "designerId": "d9a8a4ef-247c-4565-b7e4-b848db91f1ea",
+    "id": "ExtBox1-ext-gen9431",
+    "designerId": "07c11dc8-0e50-4698-8cf2-8983ce430cd0",
     "cn": [
         {
-            "type": "button",
+            "type": "container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyButton1",
-                "height": 60,
-                "itemId": "mybutton1",
-                "text": "MyButton1"
+                "designer|userClassName": "MyContainer2",
+                "designer|displayName": "LogoContainer",
+                "height": 100,
+                "style": "margin-top:20px;",
+                "layout": null
             },
-            "designerId": "cd3c5654-a8f3-4ced-9d78-6ebdd387cc76",
+            "designerId": "ad68f217-4b13-4674-a46e-0ca1ed0c37cd",
             "cn": [
                 {
-                    "type": "basiceventbinding",
+                    "type": "image",
                     "reference": {
-                        "name": "listeners",
+                        "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onMybutton1Tap",
-                        "fn": "onMybutton1Tap",
-                        "implHandler": [
-                            "this.up('Main').push({",
-                            "    title: 'Agenda',",
-                            "    xtype: 'Schedule'",
-                            "});"
-                        ],
-                        "name": "tap"
+                        "designer|userClassName": "MyImage",
+                        "height": 95,
+                        "src": "app/images/logo.png"
                     },
-                    "designerId": "9e8733ef-f691-4e8c-9a2d-41fc41d5ed0f"
+                    "designerId": "5bffc24f-a33f-441e-9c76-4b8dbfa0f4e0"
                 }
             ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer1",
+                "designer|displayName": "DashboardButtons",
+                "maxHeight": null,
+                "maxWidth": 320,
+                "minWidth": 320,
+                "padding": 0,
+                "style": "margin:0 auto;",
+                "top": null,
+                "width": null
+            },
+            "designerId": "d6b14a61-2387-4e3f-8bea-414d965f9494",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton3",
+                        "cls": "agendaButton",
+                        "height": 75,
+                        "itemId": "mybutton1",
+                        "margin": "15 10 10 20",
+                        "style": "float:left;",
+                        "width": "26%",
+                        "icon": null,
+                        "iconAlign": "center",
+                        "text": null
+                    },
+                    "designerId": "985e16dd-4599-4479-a36c-6b9060575357",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton1Tap",
+                                "fn": "onMybutton1Tap",
+                                "implHandler": [
+                                    "this.up('navigationview').push({\r",
+                                    "    title: 'Agenda',\r",
+                                    "    xtype: 'AgendaPanel'\r",
+                                    "});\r",
+                                    "\r",
+                                    "// Hide Settings, Logout and Messages buttons\r",
+                                    "\r",
+                                    "//Ext.getCmp('MessageButton').hide(true);\r",
+                                    "Ext.getCmp('SettingsButton').hide(true);\r",
+                                    ""
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "bbf494b1-3788-4cec-b53c-5e5a07d775ef"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton4",
+                        "cls": "attendeeButton",
+                        "height": 75,
+                        "itemId": "mybutton2",
+                        "margin": "15 10 10 10",
+                        "style": "float:left;",
+                        "width": "26%",
+                        "text": null
+                    },
+                    "designerId": "b17ac665-2583-4a56-a5c4-c26c7ef122e0",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton2Tap",
+                                "fn": "onMybutton2Tap",
+                                "implHandler": [
+                                    "this.up('navigationview').push({\r",
+                                    "    title: 'Attendees',\r",
+                                    "    xtype: 'AttendeesPanel'\r",
+                                    "});\r",
+                                    "\r",
+                                    "// Hide Settings, Logout and Messages buttons\r",
+                                    "\r",
+                                    "//Ext.getCmp('MessageButton').hide(true);\r",
+                                    "Ext.getCmp('SettingsButton').hide(true);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "479f5e48-f993-4e88-885a-3b553e84ec57"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton5",
+                        "cls": "speakersButton",
+                        "height": 75,
+                        "itemId": "mybutton3",
+                        "margin": "15 10 10 10",
+                        "style": "float:left",
+                        "width": "26%",
+                        "text": null
+                    },
+                    "designerId": "591e8bb8-1084-484a-95d5-1faed2118e05",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton3Tap",
+                                "fn": "onMybutton3Tap",
+                                "implHandler": [
+                                    "this.up('navigationview').push({\r",
+                                    "    title: 'Speakers',\r",
+                                    "    xtype: 'SpeakersList'\r",
+                                    "});\r",
+                                    "\r",
+                                    "// Hide Settings, Logout and Messages buttons\r",
+                                    "\r",
+                                    "//Ext.getCmp('MessageButton').hide(true);\r",
+                                    "Ext.getCmp('SettingsButton').hide(true);\r",
+                                    ""
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "38cd5e89-4335-47c3-9a65-8f2d71667171"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton5",
+                        "cls": "venuesButton",
+                        "height": 75,
+                        "itemId": "mybutton4",
+                        "margin": "15 10 10 20",
+                        "style": "float:left",
+                        "width": "26%",
+                        "text": null
+                    },
+                    "designerId": "5b4c26f1-ae6b-48e1-8965-00bfd17edd78",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton4Tap",
+                                "fn": "onMybutton4Tap",
+                                "implHandler": [
+                                    "this.up('navigationview').push({\r",
+                                    "    title: 'Venues',\r",
+                                    "    xtype: 'VenueList'\r",
+                                    "});\r",
+                                    "\r",
+                                    "// Hide Settings, Logout and Messages buttons\r",
+                                    "\r",
+                                    "//Ext.getCmp('MessageButton').hide(true);\r",
+                                    "Ext.getCmp('SettingsButton').hide(true);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "3391670d-cff5-4294-9814-1e197b612525"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton5",
+                        "cls": "sandboxButton",
+                        "height": 75,
+                        "itemId": "mybutton5",
+                        "margin": "15 10 10 10",
+                        "style": "float:left",
+                        "width": "26%",
+                        "text": null
+                    },
+                    "designerId": "eb91f1ea-ae35-4b48-a4da-cc2795d9e68b",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton5Tap",
+                                "fn": "onMybutton5Tap",
+                                "implHandler": [
+                                    "this.up('navigationview').push({\r",
+                                    "    title: 'Sandbox',\r",
+                                    "    xtype: 'CreativeList'\r",
+                                    "});\r",
+                                    "\r",
+                                    "// Hide Settings, Logout and Messages buttons\r",
+                                    "\r",
+                                    "//Ext.getCmp('MessageButton').hide(true);\r",
+                                    "Ext.getCmp('SettingsButton').hide(true);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "5c14a5d5-d0c9-4d03-97a7-68701c49098b"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton5",
+                        "cls": "activitiesButton",
+                        "height": 75,
+                        "itemId": "mybutton6",
+                        "margin": "15 10 10 10",
+                        "style": "float:left",
+                        "width": "26%",
+                        "text": null
+                    },
+                    "designerId": "83432b25-b2e0-4c76-a513-90d7e6ef39cc",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton6Tap",
+                                "fn": "onMybutton6Tap",
+                                "implHandler": [
+                                    "this.up('navigationview').push({\r",
+                                    "    title: 'Activities',\r",
+                                    "    xtype: 'ActivitiesPanel'\r",
+                                    "});\r",
+                                    "\r",
+                                    "// Hide Settings, Logout and Messages buttons\r",
+                                    "\r",
+                                    "//Ext.getCmp('MessageButton').hide(true);\r",
+                                    "Ext.getCmp('SettingsButton').hide(true);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "db4b7a02-a930-4d52-9f9f-e6a84a2c82ad"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton5",
+                        "cls": "infoButton",
+                        "height": 75,
+                        "itemId": "mybutton7",
+                        "margin": "15 10 10 20",
+                        "style": "float:left",
+                        "width": "26%",
+                        "text": null
+                    },
+                    "designerId": "81891c3e-4e1f-428b-aafd-f1cb34efcde7",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton7Tap",
+                                "fn": "onMybutton7Tap",
+                                "implHandler": [
+                                    "this.up('navigationview').push({\r",
+                                    "    title: 'Info Booth',\r",
+                                    "    xtype: 'InformationDesk'\r",
+                                    "});\r",
+                                    "\r",
+                                    "// Hide Settings, Logout and Messages buttons\r",
+                                    "\r",
+                                    "//Ext.getCmp('MessageButton').hide(true);\r",
+                                    "Ext.getCmp('SettingsButton').hide(true);\r",
+                                    ""
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "09c8c75f-a4ba-494b-82b6-76f380ebac83"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton5",
+                        "cls": "thingsButton",
+                        "height": 75,
+                        "itemId": "mybutton9",
+                        "margin": "15 10 10 10",
+                        "style": "float:left",
+                        "width": "26%",
+                        "text": null
+                    },
+                    "designerId": "5e729e1a-e818-4e47-bfed-50582694b39a",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton9Tap",
+                                "fn": "onMybutton9Tap",
+                                "implHandler": [
+                                    "this.up('navigationview').push({\r",
+                                    "    title: 'Messages',\r",
+                                    "    xtype: 'MessagePanel'\r",
+                                    "});\r",
+                                    "\r",
+                                    "\r",
+                                    "// Hide Settings, Logout and Messages buttons\r",
+                                    "\r",
+                                    "//Ext.getCmp('MessageButton').hide(true);\r",
+                                    "Ext.getCmp('SettingsButton').hide(true);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "e2aa3cd2-cb1c-419c-9df7-1e890588f8be"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton9Initialize",
+                                "fn": "onMybutton9Initialize",
+                                "implHandler": [
+                                    "var messages = 1;\r",
+                                    "\r",
+                                    "// Set the amount of new messages\r",
+                                    "if(messages == 0)\r",
+                                    "{\r",
+                                    "    this.setBadgeText('0');\r",
+                                    "} else {\r",
+                                    "    this.setBadgeText('!');\r",
+                                    "}"
+                                ],
+                                "name": "initialize"
+                            },
+                            "designerId": "1d66c19e-7307-4e48-9007-b7cdc7ba811d"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton5",
+                        "cls": "googleButton",
+                        "height": 75,
+                        "margin": "15 10 10 10",
+                        "style": "float:left",
+                        "width": "26%",
+                        "text": null
+                    },
+                    "designerId": "1814c871-9b5f-42d0-8a75-0d0d88b0954d"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDashboardShow",
+                "fn": "onDashboardShow",
+                "implHandler": [
+                    "\r",
+                    "var store = Ext.getStore('CurrentUser');\r",
+                    "\r",
+                    "store.load();\r",
+                    "var rec = store.findRecord('id', '1');\r",
+                    "messagesCheck = rec.get('allowMessages'); // get the allowMessages toggle value\r",
+                    "\r",
+                    "\r",
+                    "//\r",
+                    "//if (messagesCheck == 1)\r",
+                    "//{\r",
+                    "//    Ext.getCmp('MessageButton').show(true);\r",
+                    "//} else {\r",
+                    "//    Ext.getCmp('MessageButton').hide(true);\r",
+                    "//}\r",
+                    "\r",
+                    "\r",
+                    "// This will show the buttons that were hidden from the nav view panels\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "//Ext.getCmp('MessageButton').show(true);\r",
+                    "Ext.getCmp('SettingsButton').show(true);\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "// Load the message store to check for updated messages\r",
+                    "\r",
+                    "//Ext.getStore('MessageStore').load();\r",
+                    "//console.log('Message Store Updated.');"
+                ],
+                "name": "show"
+            },
+            "designerId": "08a7bcca-6f14-454a-ba10-1d05bafa3bd3"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDashboardInitialize",
+                "fn": "onDashboardInitialize",
+                "implHandler": [
+                    "Ext.ModelMgr.getModel('Google.model.CurrentUser').load(1, {\r",
+                    "    scope : this,\r",
+                    "    success : function(cachedLoggedInUser) {\r",
+                    "        delete cachedLoggedInUser.phantom;\r",
+                    "        // fill up the store.\r",
+                    "        var store = Ext.getStore('CurrentUser');\r",
+                    "\r",
+                    "        store.load();\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "        // Fix this for from here...\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "        var rec = store.findRecord('id', '1');\r",
+                    "        Id = rec.get('showPopup'); // or Id = value\r",
+                    "\r",
+                    "        if (Id === 0)\r",
+                    "        {\r",
+                    "            Ext.Viewport.add({\r",
+                    "                xtype: 'panel',\r",
+                    "                html: '<h1>Message Settings</h1><small>By default, messages has been turned off.<br /><br />Messaging allows other attendees the ability to communicate with each other without sharing personal information. <br /><br /> To enable messaging, please visit the settings button in the top left. </small>',\r",
+                    "                modal: true,\r",
+                    "                hideOnMaskTap: true,\r",
+                    "                padding: 20,\r",
+                    "                width:300,\r",
+                    "                centered: true\r",
+                    "            });\r",
+                    "\r",
+                    "            // Set the database value for showPopup to 1 so that the message doesn't show again\r",
+                    "\r",
+                    "\r",
+                    "            var index = store.find('id','1');\r",
+                    "            var record = store.getAt(index);\r",
+                    "            record.set('showPopup', '1' );\r",
+                    "            record.dirty = true;\r",
+                    "            store.sync();\r",
+                    "\r",
+                    "\r",
+                    "        } else {\r",
+                    "            console.log(\"The box was not shown\");\r",
+                    "        }\r",
+                    "\r",
+                    "\r",
+                    "        // To here .....\r",
+                    "\r",
+                    "\r",
+                    "    },\r",
+                    "    failure : function() {\r",
+                    "        console.warn('Show message pop up.');\r",
+                    "        // user is not logged in, show the login\r",
+                    "        //Ext.Viewport.setActiveItem('LoginPanel');\r",
+                    "        //Google.app.switchMainView('Google.view.LoginPanel');\r",
+                    "    }\r",
+                    "});"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "4a96ed7d-341f-42e4-a25f-921c1f11498e"
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer8",
+                "html": "v1.1",
+                "padding": "0 0 0 5",
+                "style": "font-size:8px;"
+            },
+            "designerId": "6f4cd81e-388f-49f9-ab17-6cdc65816ab1"
         }
     ]
 }

@@ -1,0 +1,98 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CurrentUser",
+        "designer|userAlias": "CurrentUser"
+    },
+    "id": "ExtBox1-ext-gen20308",
+    "designerId": "0624c708-fa79-4bad-b8d6-b7b90342444d",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "id"
+            },
+            "designerId": "45635fe6-28dd-4db6-bfab-9f4d1219d74a"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field1",
+                "name": "username"
+            },
+            "designerId": "6465f66c-19e4-4685-b32d-882aafafa8bf"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "allowMessages"
+            },
+            "designerId": "d684a013-450d-4e4b-865e-c30c78474c8d"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field3",
+                "name": "showPopup",
+                "defaultValue": [
+                    "0\r",
+                    ""
+                ]
+            },
+            "designerId": "c4701ab9-1c57-43a5-9426-d27545784f41"
+        },
+        {
+            "type": "localstorageproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLocalStorageProxy",
+                "id": "google-data"
+            },
+            "designerId": "64d88f1f-3cac-4c63-b3d0-f7cb7aa6b248"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field11",
+                "name": "user_id"
+            },
+            "designerId": "9c0bc99e-7723-4090-a700-7225e6988ba2"
+        }
+    ]
+}

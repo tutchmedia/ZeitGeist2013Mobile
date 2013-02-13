@@ -2,7 +2,7 @@
     /**
      * The application's namespace, used by Sencha Command to generate classes
      */
-    "name": "Zeitgeist",
+    "name": "Google",
 
     /**
      * The file path to this application's front HTML document, relative to this app.json file
@@ -136,5 +136,5 @@
      * Uniquely generated id for this application, used as prefix for localStorage keys.
      * Normally you should never change this value.
      */
-    "id": "b1c57b9f-8cac-448b-bd59-ca8a8d1e3367"
+    "id": "1efcd65a-4b46-487f-808a-9e06c090c550"
 }

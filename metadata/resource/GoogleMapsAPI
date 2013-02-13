@@ -1,0 +1,10 @@
+{
+    "type": "googlemapsjsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "id": "ExtBox1-ext-gen8585",
+    "designerId": "08612fa7-317b-46a5-bf67-0dceb770892c"
+}

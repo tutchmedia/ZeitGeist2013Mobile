@@ -1,0 +1,163 @@
+{
+    "type": "dataitem",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyDataItem",
+        "designer|userAlias": "MyDataItem",
+        "id": null,
+        "itemId": null,
+        "padding": 10,
+        "layout": "hbox"
+    },
+    "id": "ExtBox1-ext-gen10524",
+    "designerId": "a82b147b-da16-4e0a-9214-b1a233a94225",
+    "cn": [
+        {
+            "type": "component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": null,
+                "designer|userClassName": "MyComponent",
+                "html": null,
+                "itemId": "cellText",
+                "width": "75%"
+            },
+            "designerId": "b0cc8109-71f3-422a-a5ca-8e82d7be359e",
+            "cn": [
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "tpl",
+                        "implHandler": [
+                            "<div class=\"attendeesRow\">\r",
+                            "    <div class=\"attendee-name\">{full_name}</div>\r",
+                            "    <small>{j_title}</small><br />\r",
+                            "    <small>{company}</small>   \r",
+                            "</div>"
+                        ],
+                        "designer|displayName": "tpl"
+                    },
+                    "designerId": "fdc2699c-ab06-4a2c-9680-addaf243bbb6"
+                }
+            ]
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "type": "MessageButton",
+                "designer|userClassName": "MyButton15",
+                "designer|displayName": "Message",
+                "cls": "ComposeButton",
+                "height": "50%",
+                "id": null,
+                "itemId": "ComposeButton",
+                "margin": null,
+                "right": null,
+                "ui": "confirm",
+                "iconAlign": "center",
+                "iconCls": "compose",
+                "iconMask": true,
+                "text": null
+            },
+            "designerId": "3b61de77-6590-4284-86a3-5c45463806ae",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "type",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMybutton15Tap",
+                        "fn": "onMybutton15Tap",
+                        "implHandler": [
+                            "var myDataItem = button.getParent();\r",
+                            "var record = myDataItem.getRecord();\r",
+                            "\r",
+                            "\r",
+                            "// Algorithm to not show the button if the user's option is set to off\r",
+                            "\r",
+                            "var allowMessages = record.data.allow_messaging;\r",
+                            "\r",
+                            "if(allowMessages == 0)\r",
+                            "{\r",
+                            "    console.log(\"Button Hidden\");\r",
+                            "    Ext.Msg.alert(\"Privacy Alert\", \"Sorry, this guest doesn't allow messaging.\");\r",
+                            "} else {\r",
+                            "\r",
+                            "    this.up('navigationview').push({\r",
+                            "        title: 'Compose',\r",
+                            "        xtype: 'ComposePanel',\r",
+                            "        userID: record.data.id,\r",
+                            "        full_name: record.data.full_name\r",
+                            "    });\r",
+                            "\r",
+                            "}"
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "5936009a-cfc6-4f03-99e8-5b904b86b75f"
+                }
+            ]
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton16",
+                "height": "50%",
+                "left": null,
+                "top": null,
+                "text": "+"
+            },
+            "designerId": "bba183ed-d5d8-4d6d-8c7d-3171e631e09a"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDataitemInitialize",
+                "fn": "onDataitemInitialize",
+                "implHandler": [
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "designerId": "a606849f-2ad1-48ea-ba24-6475cafa3beb"
+        }
+    ]
+}

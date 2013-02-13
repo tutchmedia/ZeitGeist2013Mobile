@@ -1,0 +1,88 @@
+{
+    "type": "list",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CreativeList",
+        "designer|userAlias": "CreativeList",
+        "id": "CreativeList",
+        "itemId": "CreativeList",
+        "store": "SandboxStore"
+    },
+    "id": "ExtBox1-ext-gen13146",
+    "designerId": "239e5d0d-f22f-413b-9f4b-31bd3f5b3f08",
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<div class=\"CreativeSandboxPadding\">\r",
+                    "    <div class=\"CreativeSandboxLeft\">\r",
+                    "        <img src=\"{icon}\" />\r",
+                    "    </div>\r",
+                    "    \r",
+                    "    <div class=\"CreativeSandboxRight\">\r",
+                    "    \r",
+                    "        <div class=\"CreativeSandboxTitle\">{title}</div>\r",
+                    "        <div class=\"CreativeSandboxInfo\"><small>{info}</small></div>\r",
+                    "    \r",
+                    "    </div>\r",
+                    "</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "a934ee7b-92fe-4e10-8d00-3acca6dae901"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onListInitialize",
+                "fn": "onListInitialize",
+                "implHandler": [
+                    "// Load in the stores\r",
+                    "\r",
+                    "\r",
+                    "//Load the Speakers Store in\r",
+                    "Ext.getStore('SandboxStore').load();"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "30406eb3-40a0-4646-8dbb-2e62ccf08ec8"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onCreativeListItemTap",
+                "fn": "onCreativeListItemTap",
+                "implHandler": [
+                    "this.up('NavView').push({\r",
+                    "    xtype: 'SandboxDetails',\r",
+                    "    data: record.data,\r",
+                    "    title: 'Details'\r",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "a63acf97-f26d-4a67-a27b-42d1b090fa31"
+        }
+    ]
+}

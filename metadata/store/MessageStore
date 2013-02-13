@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MessageStore",
+        "designer|userAlias": "MessageStore",
+        "model": "MessageList",
+        "storeId": "MessageStore"
+    },
+    "id": "ExtBox1-ext-gen11365",
+    "designerId": "35170c56-2447-4866-8872-d8c2dfcb7272",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy",
+                "url": "http://api.eventsy.co.uk/message-service.php"
+            },
+            "designerId": "6422de0c-2171-4bc5-8135-5f5361058127",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "rootProperty": "categories"
+                    },
+                    "designerId": "b7f4103d-d8f6-49b3-a5c9-5370c54ae5ba"
+                }
+            ]
+        }
+    ]
+}

@@ -17,17 +17,138 @@ Ext.define('Google.view.Dashboard', {
     extend: 'Ext.Panel',
     alias: 'widget.Dashboard',
 
+    requires: [
+        'Ext.Img'
+    ],
+
     config: {
-        padding: 20,
-        layout: {
-            type: 'card'
-        },
+        id: 'Dashboard',
+        style: 'background-color:#fff;',
+        scrollable: false,
         items: [
             {
-                xtype: 'button',
-                height: 60,
-                itemId: 'mybutton1',
-                text: 'MyButton1'
+                xtype: 'container',
+                height: 100,
+                style: 'margin-top:20px;',
+                items: [
+                    {
+                        xtype: 'image',
+                        height: 95,
+                        src: 'app/images/logo.png'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                maxWidth: 320,
+                minWidth: 320,
+                padding: 0,
+                style: 'margin:0 auto;',
+                items: [
+                    {
+                        xtype: 'button',
+                        cls: 'agendaButton',
+                        height: 75,
+                        itemId: 'mybutton1',
+                        margin: '15 10 10 20',
+                        style: 'float:left;',
+                        width: '26%',
+                        iconAlign: 'center'
+                    },
+                    {
+                        xtype: 'button',
+                        cls: 'attendeeButton',
+                        height: 75,
+                        itemId: 'mybutton2',
+                        margin: '15 10 10 10',
+                        style: 'float:left;',
+                        width: '26%'
+                    },
+                    {
+                        xtype: 'button',
+                        cls: 'speakersButton',
+                        height: 75,
+                        itemId: 'mybutton3',
+                        margin: '15 10 10 10',
+                        style: 'float:left',
+                        width: '26%'
+                    },
+                    {
+                        xtype: 'button',
+                        cls: 'venuesButton',
+                        height: 75,
+                        itemId: 'mybutton4',
+                        margin: '15 10 10 20',
+                        style: 'float:left',
+                        width: '26%'
+                    },
+                    {
+                        xtype: 'button',
+                        cls: 'sandboxButton',
+                        height: 75,
+                        itemId: 'mybutton5',
+                        margin: '15 10 10 10',
+                        style: 'float:left',
+                        width: '26%'
+                    },
+                    {
+                        xtype: 'button',
+                        cls: 'activitiesButton',
+                        height: 75,
+                        itemId: 'mybutton6',
+                        margin: '15 10 10 10',
+                        style: 'float:left',
+                        width: '26%'
+                    },
+                    {
+                        xtype: 'button',
+                        cls: 'infoButton',
+                        height: 75,
+                        itemId: 'mybutton7',
+                        margin: '15 10 10 20',
+                        style: 'float:left',
+                        width: '26%'
+                    },
+                    {
+                        xtype: 'button',
+                        cls: 'thingsButton',
+                        height: 75,
+                        itemId: 'mybutton9',
+                        margin: '15 10 10 10',
+                        style: 'float:left',
+                        width: '26%',
+                        listeners: [
+                            {
+                                fn: function(component, options) {
+                                    var messages = 1;
+
+                                    // Set the amount of new messages
+                                    if(messages == 0)
+                                    {
+                                        this.setBadgeText('0');
+                                    } else {
+                                        this.setBadgeText('!');
+                                    }
+                                },
+                                event: 'initialize'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'button',
+                        cls: 'googleButton',
+                        height: 75,
+                        margin: '15 10 10 10',
+                        style: 'float:left',
+                        width: '26%'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                html: 'v1.1',
+                padding: '0 0 0 5',
+                style: 'font-size:8px;'
             }
         ],
         listeners: [
@@ -35,14 +156,243 @@ Ext.define('Google.view.Dashboard', {
                 fn: 'onMybutton1Tap',
                 event: 'tap',
                 delegate: '#mybutton1'
+            },
+            {
+                fn: 'onMybutton2Tap',
+                event: 'tap',
+                delegate: '#mybutton2'
+            },
+            {
+                fn: 'onMybutton3Tap',
+                event: 'tap',
+                delegate: '#mybutton3'
+            },
+            {
+                fn: 'onMybutton4Tap',
+                event: 'tap',
+                delegate: '#mybutton4'
+            },
+            {
+                fn: 'onMybutton5Tap',
+                event: 'tap',
+                delegate: '#mybutton5'
+            },
+            {
+                fn: 'onMybutton6Tap',
+                event: 'tap',
+                delegate: '#mybutton6'
+            },
+            {
+                fn: 'onMybutton7Tap',
+                event: 'tap',
+                delegate: '#mybutton7'
+            },
+            {
+                fn: 'onMybutton9Tap',
+                event: 'tap',
+                delegate: '#mybutton9'
+            },
+            {
+                fn: 'onDashboardShow',
+                event: 'show'
+            },
+            {
+                fn: 'onDashboardInitialize',
+                event: 'initialize'
             }
         ]
     },
 
     onMybutton1Tap: function(button, e, options) {
-        this.up('Main').push({
+        this.up('navigationview').push({
             title: 'Agenda',
-            xtype: 'Schedule'
+            xtype: 'AgendaPanel'
+        });
+
+        // Hide Settings, Logout and Messages buttons
+
+        //Ext.getCmp('MessageButton').hide(true);
+        Ext.getCmp('SettingsButton').hide(true);
+
+    },
+
+    onMybutton2Tap: function(button, e, options) {
+        this.up('navigationview').push({
+            title: 'Attendees',
+            xtype: 'AttendeesPanel'
+        });
+
+        // Hide Settings, Logout and Messages buttons
+
+        //Ext.getCmp('MessageButton').hide(true);
+        Ext.getCmp('SettingsButton').hide(true);
+    },
+
+    onMybutton3Tap: function(button, e, options) {
+        this.up('navigationview').push({
+            title: 'Speakers',
+            xtype: 'SpeakersList'
+        });
+
+        // Hide Settings, Logout and Messages buttons
+
+        //Ext.getCmp('MessageButton').hide(true);
+        Ext.getCmp('SettingsButton').hide(true);
+
+    },
+
+    onMybutton4Tap: function(button, e, options) {
+        this.up('navigationview').push({
+            title: 'Venues',
+            xtype: 'VenueList'
+        });
+
+        // Hide Settings, Logout and Messages buttons
+
+        //Ext.getCmp('MessageButton').hide(true);
+        Ext.getCmp('SettingsButton').hide(true);
+    },
+
+    onMybutton5Tap: function(button, e, options) {
+        this.up('navigationview').push({
+            title: 'Sandbox',
+            xtype: 'CreativeList'
+        });
+
+        // Hide Settings, Logout and Messages buttons
+
+        //Ext.getCmp('MessageButton').hide(true);
+        Ext.getCmp('SettingsButton').hide(true);
+    },
+
+    onMybutton6Tap: function(button, e, options) {
+        this.up('navigationview').push({
+            title: 'Activities',
+            xtype: 'ActivitiesPanel'
+        });
+
+        // Hide Settings, Logout and Messages buttons
+
+        //Ext.getCmp('MessageButton').hide(true);
+        Ext.getCmp('SettingsButton').hide(true);
+    },
+
+    onMybutton7Tap: function(button, e, options) {
+        this.up('navigationview').push({
+            title: 'Info Booth',
+            xtype: 'InformationDesk'
+        });
+
+        // Hide Settings, Logout and Messages buttons
+
+        //Ext.getCmp('MessageButton').hide(true);
+        Ext.getCmp('SettingsButton').hide(true);
+
+    },
+
+    onMybutton9Tap: function(button, e, options) {
+        this.up('navigationview').push({
+            title: 'Messages',
+            xtype: 'MessagePanel'
+        });
+
+
+        // Hide Settings, Logout and Messages buttons
+
+        //Ext.getCmp('MessageButton').hide(true);
+        Ext.getCmp('SettingsButton').hide(true);
+    },
+
+    onDashboardShow: function(component, options) {
+
+        var store = Ext.getStore('CurrentUser');
+
+        store.load();
+        var rec = store.findRecord('id', '1');
+        messagesCheck = rec.get('allowMessages'); // get the allowMessages toggle value
+
+
+        //
+        //if (messagesCheck == 1)
+        //{
+        //    Ext.getCmp('MessageButton').show(true);
+        //} else {
+        //    Ext.getCmp('MessageButton').hide(true);
+        //}
+
+
+        // This will show the buttons that were hidden from the nav view panels
+
+
+
+        //Ext.getCmp('MessageButton').show(true);
+        Ext.getCmp('SettingsButton').show(true);
+
+
+
+
+        // Load the message store to check for updated messages
+
+        //Ext.getStore('MessageStore').load();
+        //console.log('Message Store Updated.');
+    },
+
+    onDashboardInitialize: function(component, options) {
+        Ext.ModelMgr.getModel('Google.model.CurrentUser').load(1, {
+            scope : this,
+            success : function(cachedLoggedInUser) {
+                delete cachedLoggedInUser.phantom;
+                // fill up the store.
+                var store = Ext.getStore('CurrentUser');
+
+                store.load();
+
+
+
+                // Fix this for from here...
+
+
+
+                var rec = store.findRecord('id', '1');
+                Id = rec.get('showPopup'); // or Id = value
+
+                if (Id === 0)
+                {
+                    Ext.Viewport.add({
+                        xtype: 'panel',
+                        html: '<h1>Message Settings</h1><small>By default, messages has been turned off.<br /><br />Messaging allows other attendees the ability to communicate with each other without sharing personal information. <br /><br /> To enable messaging, please visit the settings button in the top left. </small>',
+                        modal: true,
+                        hideOnMaskTap: true,
+                        padding: 20,
+                        width:300,
+                        centered: true
+                    });
+
+                    // Set the database value for showPopup to 1 so that the message doesn't show again
+
+
+                    var index = store.find('id','1');
+                    var record = store.getAt(index);
+                    record.set('showPopup', '1' );
+                    record.dirty = true;
+                    store.sync();
+
+
+                } else {
+                    console.log("The box was not shown");
+                }
+
+
+                // To here .....
+
+
+            },
+            failure : function() {
+                console.warn('Show message pop up.');
+                // user is not logged in, show the login
+                //Ext.Viewport.setActiveItem('LoginPanel');
+                //Google.app.switchMainView('Google.view.LoginPanel');
+            }
         });
     }
 

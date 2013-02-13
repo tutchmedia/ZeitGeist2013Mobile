@@ -1,0 +1,195 @@
+{
+    "type": "tabpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ActivitiesPanel",
+        "designer|userAlias": "ActivitiesPanel",
+        "ui": "light"
+    },
+    "id": "ExtBox1-ext-gen24564",
+    "designerId": "9e5e61a7-317a-4584-9d56-411ce63b4d8c",
+    "cn": [
+        {
+            "type": "list",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Day",
+                "designer|userClassName": "MyList9",
+                "designer|displayName": "Day",
+                "itemId": "mylist9",
+                "store": "ActivitiesStore"
+            },
+            "designerId": "a378f758-2d25-4644-82f2-4a8c722d09be",
+            "cn": [
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"act-padding\">\r",
+                            "    <small>{from} - {until}</small>\r",
+                            "    <div class=\"blue-text-norm\">{title}</div>\r",
+                            "    <small>{location}</small>\r",
+                            "    \r",
+                            "\r",
+                            "</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "3fa4655d-16e3-47b0-bc32-a805b4946fc9"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMylist9Show",
+                        "fn": "onMylist9Show",
+                        "implHandler": [
+                            "// Load in the stores\r",
+                            "\r",
+                            "\r",
+                            "Ext.getStore('ActivitiesStore').getProxy().setExtraParams({\r",
+                            "    'section':'1',\r",
+                            "    'activities': true,\r",
+                            "    'event' : '1'\r",
+                            "});\r",
+                            "\r",
+                            "\r",
+                            "//Load the Speakers Store in\r",
+                            "Ext.getStore('ActivitiesStore').load();"
+                        ],
+                        "name": "show"
+                    },
+                    "designerId": "f9662431-3881-4020-907a-c140db84fbda"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMylist9ItemTap",
+                        "fn": "onMylist9ItemTap",
+                        "implHandler": [
+                            "this.up('NavView').push({\r",
+                            "    xtype: 'ActivityPanel',\r",
+                            "    data: record.data,\r",
+                            "    title: 'Details'\r",
+                            "});"
+                        ],
+                        "name": "itemtap"
+                    },
+                    "designerId": "ebedf471-67fc-4b31-beb5-722cb73c50c0"
+                }
+            ]
+        },
+        {
+            "type": "list",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Night",
+                "designer|userClassName": "MyList10",
+                "designer|displayName": "Night",
+                "itemId": "mylist10",
+                "store": "ActivitiesStore"
+            },
+            "designerId": "30726559-fd85-4221-9e38-8dfc103342ac",
+            "cn": [
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"act-padding\">\r",
+                            "    <small>{from} - {until}</small>\r",
+                            "    <div class=\"blue-text-norm\">{title}</div>\r",
+                            "    <small>{location}</small>\r",
+                            "    \r",
+                            "\r",
+                            "</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "dcc7a80b-3409-4e04-a911-bf929a4f6e9d"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMylist10Show",
+                        "fn": "onMylist10Show",
+                        "implHandler": [
+                            "// Load in the stores\r",
+                            "\r",
+                            "\r",
+                            "Ext.getStore('ActivitiesStore').getProxy().setExtraParams({\r",
+                            "    'section':'2',\r",
+                            "    'activities': true,\r",
+                            "    'event' : '1'\r",
+                            "});\r",
+                            "\r",
+                            "\r",
+                            "//Load the Speakers Store in\r",
+                            "Ext.getStore('ActivitiesStore').load();"
+                        ],
+                        "name": "show"
+                    },
+                    "designerId": "189b570b-19bb-494b-a7bd-dcd262d5f487"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMylist10ItemTap",
+                        "fn": "onMylist10ItemTap",
+                        "implHandler": [
+                            "this.up('NavView').push({\r",
+                            "    xtype: 'ActivityPanel',\r",
+                            "    data: record.data,\r",
+                            "    title: 'Details'\r",
+                            "});"
+                        ],
+                        "name": "itemtap"
+                    },
+                    "designerId": "c23b9159-cbce-4b62-881d-27d524eceba7"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ActivityPanel",
+        "designer|userAlias": "ActivityPanel",
+        "padding": 20,
+        "scrollable": "horizontal"
+    },
+    "id": "ExtBox1-ext-gen37491",
+    "designerId": "4ffdc823-5cec-4377-9578-e524ea8a8d14",
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tpl",
+                "implHandler": [
+                    "<div class=\"blue-text\">{title}</div>\r",
+                    "\r",
+                    "Time: {from} - {until}\r",
+                    "<br /><br />\r",
+                    "\r",
+                    "Location: {location}\r",
+                    "<br /><br />\r",
+                    "<small>\r",
+                    "{info}\r",
+                    "</small>"
+                ],
+                "designer|displayName": "tpl"
+            },
+            "designerId": "afe2a39a-eb79-4822-a8f1-2ed933ded377"
+        }
+    ]
+}

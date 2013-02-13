@@ -1,0 +1,82 @@
+{
+    "type": "list",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SpeakersList",
+        "designer|userAlias": "SpeakersList",
+        "store": "SpeakersStore"
+    },
+    "id": "ExtBox1-ext-gen11124",
+    "designerId": "cede0bf8-9bed-4f2c-af65-e979bc14fb7e",
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<div class=\"speakerRow\">\r",
+                    "    <div class=\"speakerImage\"><img src=\"{image}\" /></div>\r",
+                    "    <div class=\"speakerInfo\">\r",
+                    "        <div class=\"blue-text\">{full_name}</div>\r",
+                    "        {j_title}<br />\r",
+                    "        {company}        \r",
+                    "    </div>\r",
+                    "</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "bcff1513-08b7-4bb4-a0d2-296a5419ed9a"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onListInitialize",
+                "fn": "onListInitialize",
+                "implHandler": [
+                    "// Load in the stores\r",
+                    "\r",
+                    "\r",
+                    "//Load the Speakers Store in\r",
+                    "Ext.getStore('SpeakersStore').load();"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "d334d578-e64b-4371-bcdb-d68c982c25af"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onListItemTap",
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "this.up('NavView').push({\r",
+                    "    xtype: 'profileDetails',\r",
+                    "    data: record.data,\r",
+                    "    title: 'Details'\r",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "0ae68dc0-bf65-4ec0-87c5-2903e7b0c2e9"
+        }
+    ]
+}

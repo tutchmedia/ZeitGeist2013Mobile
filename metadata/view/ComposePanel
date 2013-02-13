@@ -1,0 +1,205 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ComposePanel",
+        "designer|userAlias": "ComposePanel",
+        "requires": [
+            "Ext.field.Hidden"
+        ]
+    },
+    "id": "ExtBox1-ext-gen24637",
+    "designerId": "e3d685f3-bafa-4147-ad6d-f4d7d9c1a4e8",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "userID",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "full_name",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet1",
+                "title": "Compose"
+            },
+            "designerId": "72ba7ab9-48cb-4cd5-9681-282e0ad46d40",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField1",
+                        "id": "full_name",
+                        "label": "",
+                        "name": "full_name",
+                        "placeHolder": "Name",
+                        "readOnly": true
+                    },
+                    "designerId": "046b1a75-b9ee-4581-a8f0-649b02accbbc"
+                },
+                {
+                    "type": "textareafield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextArea",
+                        "id": "message",
+                        "label": null,
+                        "name": "message",
+                        "placeHolder": "Message"
+                    },
+                    "designerId": "1c2bf4bf-3aa5-432f-96d4-156c55426fa1"
+                },
+                {
+                    "type": "hiddenfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyHiddenField",
+                        "designer|displayName": "user_id",
+                        "id": "user_id",
+                        "name": "user_id"
+                    },
+                    "designerId": "d474ddea-ebf5-40ff-ae26-8b8492d00650"
+                },
+                {
+                    "type": "hiddenfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyHiddenField1",
+                        "id": "from",
+                        "name": "from"
+                    },
+                    "designerId": "334ebc81-e129-4833-88a8-f79729610872"
+                },
+                {
+                    "type": "hiddenfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyHiddenField4",
+                        "designer|displayName": "c_id",
+                        "name": "c_id"
+                    },
+                    "designerId": "5c9d5692-7a6e-4be0-945f-104d94d4a5bc"
+                }
+            ]
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton14",
+                "itemId": "mybutton",
+                "ui": "confirm",
+                "text": "Send"
+            },
+            "designerId": "e5babc53-f571-43f8-a6de-ff14ea380bef",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMybuttonTap",
+                        "fn": "onMybuttonTap",
+                        "implHandler": [
+                            "var values = this.getValues();\r",
+                            "//console.log(values);\r",
+                            "\r",
+                            "this.submit({\r",
+                            "    url: 'http://api.eventsy.co.uk/message.php',\r",
+                            "    method: 'POST',\r",
+                            "    success: function(response) {\r",
+                            "        // do whatever you need to with the generated HTML\r",
+                            "        Ext.Msg.alert(\"Sent\", \"Your message has been sent.\");\r",
+                            "        this.reset();\r",
+                            "        this.up('NavView').pop();\r",
+                            "    },\r",
+                            "    failure: function(response){\r",
+                            "        // Do failure message\r",
+                            "        Ext.Msg.alert(\"Failed\", \"Sorry, you cannot send a blank message.\");\r",
+                            "    }\r",
+                            "});"
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "1a7c8acf-b0dd-47a7-a55e-c1aa28e74693"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onFormpanelInitialize",
+                "fn": "onFormpanelInitialize",
+                "implHandler": [
+                    "var userID = this.getInitialConfig('userID');\r",
+                    "var full_name = this.getInitialConfig('full_name');\r",
+                    "\r",
+                    "\r",
+                    "var store = Ext.getStore('CurrentUser');\r",
+                    "\r",
+                    "store.load();\r",
+                    "var rec = store.findRecord('id', '1');\r",
+                    "myid = rec.get('user_id');\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "// Stick the name in the recipient field\r",
+                    "\r",
+                    "Ext.getCmp('full_name').setValue(full_name);\r",
+                    "Ext.getCmp('user_id').setValue(userID);\r",
+                    "Ext.getCmp('from').setValue(myid);"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "469e75aa-44ac-4df7-9fad-85d1b0a5f965"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "LocalVenues",
+        "designer|userAlias": "LocalVenues",
+        "data": "[\r\n{\r\n\"id\" :    \"1\",\r\n\"title\" :    \"Champneys Tiring\",\r\n\"address_1\" :    \"Lewings Farm, Chesham Road\",\r\n\"address_2\" :    \"Wiginton, Tiring, Hertfordshire\",\r\n\"postcode\" :    \"HP23 6HY\",\r\n\"tel\" :    \"01442 291 000\",\r\n\"lat\" :    \"51.769314\",\r\n\"long\" : \"-0.62813\",\r\n\"event_id\" :    \"1\"\r\n\r\n}\r\n]",
+        "model": "LocalVenues",
+        "storeId": "LocalVenues"
+    },
+    "id": "ExtBox1-ext-gen2848",
+    "designerId": "035369e5-f98c-458f-88f3-812954039cd4"
+}

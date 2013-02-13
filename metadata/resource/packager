@@ -7,17 +7,17 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "packager",
-        "applicationName": "Zeitgeist",
+        "applicationName": "Google",
         "applicationId": "com.mycompany.myAppID",
         "versionString": "1.0",
-        "versionCode": 1,
+        "versionCode": "1",
         "icon": [
             "{\"57\":\"resources/icons/Icon.png\",\"72\":\"resources/icons/Icon~ipad.png\",\"114\":\"resources/icons/Icon@2x.png\",\"144\":\"resources/icons/Icon~ipad@2x.png\"}"
         ],
         "inputPath": "./",
         "outputPath": "../build/",
         "configuration": "Debug",
-        "platform": "iOS",
+        "platform": "iOSSimulator",
         "deviceType": "Universal",
         "androidAPILevel": "8",
         "permissions": [
@@ -36,6 +36,6 @@
             "portraitUpsideDown"
         ]
     },
-    "id": "ExtBox1-ext-gen2453",
-    "designerId": "df43fa76-b75e-47c3-9a3f-6f196ba3e352"
+    "id": "ExtBox1-ext-gen2558",
+    "designerId": "c61e74f1-316e-49fa-b6e3-bdc3921fd768"
 }

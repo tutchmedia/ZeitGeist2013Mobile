@@ -1,0 +1,145 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Schedule"
+    },
+    "id": "ExtBox1-ext-gen2392",
+    "designerId": "c9ea9293-5e91-4478-8de2-77fcadc0b367",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field21",
+                "name": "id"
+            },
+            "designerId": "d154e3d2-a789-466a-b754-3c72f5837a6c"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field22",
+                "name": "time"
+            },
+            "designerId": "fd8e567c-3f23-4bb5-87d3-7fe0fd4c7caf"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field23",
+                "name": "until"
+            },
+            "designerId": "c0454b79-bff0-42ac-8942-902967b3336b"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field24",
+                "name": "title"
+            },
+            "designerId": "a0ff875c-9c47-4e65-bd1c-daaa5b399ee5"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field25",
+                "name": "name"
+            },
+            "designerId": "9db1035d-fd33-48b2-8aab-1a75d2c47a5d"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field26",
+                "name": "speakers_id"
+            },
+            "designerId": "e2fca8a8-7ab9-4605-9bff-a7b5d5e6ef4c"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field27",
+                "name": "description"
+            },
+            "designerId": "aefa7ee9-1ca9-40a1-b363-4b1dd8e2b48f"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field28",
+                "name": "location"
+            },
+            "designerId": "2179e1ef-f3df-4cca-b06c-82ecbc546cc2"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field29",
+                "name": "date"
+            },
+            "designerId": "7c7772b0-2317-439b-9411-8080d40b15c9"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field30",
+                "name": "event_id"
+            },
+            "designerId": "33429736-7d79-4b07-878c-3195d1dc2a8a"
+        }
+    ]
+}

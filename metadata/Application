@@ -6,17 +6,116 @@
     },
     "codeClass": null,
     "userConfig": {
+        "models": [
+            "CurrentUser",
+            "MessageList",
+            "AttendeesList",
+            "Schedule",
+            "SpeakersList",
+            "LocalVenues",
+            "SandboxModel",
+            "ActivitiesList",
+            "InformationDesk"
+        ],
+        "stores": [
+            "CurrentUser",
+            "MessageStore",
+            "AttendeesWebStore",
+            "AttendeesLocalStore",
+            "MessageRead",
+            "ScheduleDay1",
+            "ScheduleDay2",
+            "ScheduleDay3",
+            "SpeakersStore",
+            "LocalVenues",
+            "SandboxStore",
+            "ActivitiesStore",
+            "InformationStore",
+            "AttendeesGoogleStore"
+        ],
         "views": [
-            "Main",
             "LoginPanel",
             "Dashboard",
-            "Schedule"
+            "NavView",
+            "SettingsPanel",
+            "MessagePanel",
+            "ComposePanel",
+            "AgendaPanel",
+            "AttendeesPanel",
+            "MyDataItem",
+            "readMessage",
+            "EventDetailView",
+            "SpeakersList",
+            "VenueList",
+            "VenueDetailView",
+            "CreativeList",
+            "SandboxDetails",
+            "ActivitiesPanel",
+            "ActivityPanel",
+            "InformationDesk",
+            "InfoPanel",
+            "ProfileDetails",
+            "MyDataItem1",
+            "AskQuestion"
         ],
         "name": "Google"
     },
     "id": "ExtBox1-ext-gen1580",
     "designerId": "application",
     "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "var me = this;\r",
+                    "\r",
+                    "Ext.ModelMgr.getModel('Google.model.CurrentUser').load(1, {\r",
+                    "    scope : this,\r",
+                    "    success : function(cachedLoggedInUser) {\r",
+                    "        delete cachedLoggedInUser.phantom;\r",
+                    "        // fill up the store.\r",
+                    "        var store = Ext.getStore('CurrentUser');\r",
+                    "        store.add(cachedLoggedInUser);\r",
+                    "\r",
+                    "\r",
+                    "        console.info('Auto-Login succeeded.');\r",
+                    "        Ext.Viewport.setActiveItem('NavView');\r",
+                    "\r",
+                    "    },\r",
+                    "    failure : function() {\r",
+                    "        console.warn('Auto-Login failed (user was not logged in).');\r",
+                    "        // user is not logged in, show the login\r",
+                    "        //Ext.Viewport.setActiveItem('LoginPanel');\r",
+                    "        //Google.app.switchMainView('Google.view.LoginPanel');\r",
+                    "    }\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "// This will show a spinner icon when logging in and any network communications\r",
+                    "\r",
+                    "Ext.Viewport.add({\r",
+                    "    xtype: 'loadmask',\r",
+                    "    id: 'ajaxMask',\r",
+                    "    message: 'Loading...',\r",
+                    "    indicator: true,\r",
+                    "    hidden: true\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "Ext.Ajax.on('beforerequest', function() { Ext.getCmp('ajaxMask').show(); }, this); \r",
+                    "Ext.Ajax.on('requestcomplete', function() { Ext.getCmp('ajaxMask').hide(); }, this); \r",
+                    "Ext.Ajax.on('requestexception', function() { Ext.getCmp('ajaxMask').hide(); }, this);"
+                ]
+            },
+            "designerId": "d2911177-4ce3-4caa-b793-5d82b2c69c51"
+        },
         {
             "type": "viewport",
             "reference": {
@@ -27,7 +126,7 @@
             "userConfig": {
                 "designer|userClassName": "Viewport"
             },
-            "designerId": "69975638-f316-4e75-a91b-ee988547dd18"
+            "designerId": "70e226de-6a82-406c-bbba-ef9579f6e219"
         }
     ]
 }

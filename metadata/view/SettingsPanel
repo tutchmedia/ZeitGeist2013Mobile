@@ -1,0 +1,274 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SettingsPanel",
+        "designer|userAlias": "SettingsPanel",
+        "requires": [
+            "Ext.field.Toggle"
+        ]
+    },
+    "id": "ExtBox1-ext-gen2340",
+    "designerId": "1e83974a-819b-48b9-8835-8267fa37fa1d",
+    "cn": [
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer3",
+                "designer|displayName": "SettingsInfo",
+                "height": 150,
+                "html": "<h1>Message</h1> <small>Messages allows attendees to contact each other. It provides a safe enviroment to talk to other guest without giving out personal information. </small>"
+            },
+            "designerId": "f244d063-501c-40b3-820f-eca7163df786"
+        },
+        {
+            "type": "togglefield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyToggleField",
+                "designer|displayName": "messages",
+                "itemId": "mytogglefield",
+                "label": "Messages",
+                "name": "messages"
+            },
+            "designerId": "2c65a809-d067-43d3-be43-64ca106fa0a4",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMytogglefieldChange",
+                        "fn": "onMytogglefieldChange",
+                        "implHandler": [
+                            "\r",
+                            "// Set to 1 text\r",
+                            "\r",
+                            "\r",
+                            "var store = Ext.getStore('CurrentUser');\r",
+                            "var index = store.find('id','1');\r",
+                            "var record = store.getAt(index);\r",
+                            "\r",
+                            "\r",
+                            "var rec = store.findRecord('id', '1');\r",
+                            "var user_id = rec.get('user_id'); // get the allowMessages toggle value\r",
+                            "\r",
+                            "\r",
+                            "var val = eOpts;\r",
+                            "\r",
+                            "if (val === 1)\r",
+                            "{\r",
+                            "\r",
+                            "\r",
+                            "    // Set to 1\r",
+                            "    record.set('allowMessages', '1' );\r",
+                            "    record.dirty = true;\r",
+                            "    store.sync(); \r",
+                            "\r",
+                            "    console.log(\"Updated Messages Settings to 1\");\r",
+                            "\r",
+                            "    this.submit({\r",
+                            "        url: 'http://api.eventsy.co.uk/options.php?user_id='+ user_id +'&allowMessages=1',\r",
+                            "        method: 'GET',\r",
+                            "        success: function(response) {\r",
+                            "            // do whatever you need to with the generated HTML\r",
+                            "            console.log(\"Changed web option to 1\");\r",
+                            "        },\r",
+                            "        failure: function(response){\r",
+                            "            // Do failure message\r",
+                            "            console.warn(\"Didn't work.\");\r",
+                            "        }\r",
+                            "    });\r",
+                            "\r",
+                            "\r",
+                            "} else { \r",
+                            "    // Set to 0\r",
+                            "    record.set('allowMessages', '0' );\r",
+                            "    record.dirty = true;\r",
+                            "    store.sync(); \r",
+                            "\r",
+                            "    console.log(\"Updated Messages Settings to 0\");\r",
+                            "\r",
+                            "\r",
+                            "    // Update web option for the user\r",
+                            "\r",
+                            "    this.submit({\r",
+                            "        url: 'http://api.eventsy.co.uk/options.php?user_id='+ user_id +'&allowMessages=0',\r",
+                            "        method: 'GET',\r",
+                            "        success: function(response) {\r",
+                            "            // do whatever you need to with the generated HTML\r",
+                            "            console.log(\"Changed web option to 0\");\r",
+                            "        },\r",
+                            "        failure: function(response){\r",
+                            "            // Do failure message\r",
+                            "            console.warn(\"Didn't work.\");\r",
+                            "        }\r",
+                            "    });\r",
+                            "\r",
+                            "\r",
+                            "}\r",
+                            "\r",
+                            ""
+                        ],
+                        "single": false,
+                        "name": "change"
+                    },
+                    "designerId": "023fcd69-1c01-4eee-a0a1-9cdf58f732f5"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMytogglefieldInitialize",
+                        "fn": "onMytogglefieldInitialize",
+                        "implHandler": [
+                            "var store = Ext.getStore('CurrentUser');\r",
+                            "\r",
+                            "store.load();\r",
+                            "var rec = store.findRecord('id', '1');\r",
+                            "messages = rec.get('allowMessages'); // get the allowMessages toggle value\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "this.setValue(messages);\r",
+                            "\r",
+                            "console.log(\"Set the toggle to the same as the database\");\r",
+                            ""
+                        ],
+                        "name": "initialize"
+                    },
+                    "designerId": "e18bfc22-7f48-4bbe-a159-d22039bbcfc8"
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer7",
+                "margin": "50 0 0 0"
+            },
+            "designerId": "ebc0452f-3dfe-4445-92bf-27324ab793d0",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton24",
+                        "designer|displayName": "Logout",
+                        "itemId": "mybutton24",
+                        "ui": "decline",
+                        "badgeText": null,
+                        "text": "Log Out"
+                    },
+                    "designerId": "a46ced9b-3765-4662-9a1c-965cdc52e34d",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton24Tap",
+                                "fn": "onMybutton24Tap",
+                                "implHandler": [
+                                    "Ext.ModelMgr.getModel('Google.model.CurrentUser').load(1, {\r",
+                                    "    success: function(username) {\r",
+                                    "\r",
+                                    "        Ext.Msg.confirm('Confirm', 'Are you sure you want to log out?', function(confirmed) {\r",
+                                    "            if (confirmed == 'yes') {\r",
+                                    "                username.erase({\r",
+                                    "                    success: function() {\r",
+                                    "                        window.location.reload();\r",
+                                    "                    }\r",
+                                    "                });\r",
+                                    "            }\r",
+                                    "        }, this);\r",
+                                    "    },\r",
+                                    "\r",
+                                    "    failure: function() {\r",
+                                    "        // this should not happen, nevertheless:\r",
+                                    "        window.location.reload();\r",
+                                    "    }\r",
+                                    "\r",
+                                    "},\r",
+                                    "this\r",
+                                    ");"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "9ab17ea1-2c20-4473-a352-eb1aca3d1204"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onFormpanelShow",
+                "fn": "onFormpanelShow",
+                "implHandler": [
+                    "//Ext.getCmp('SettingsButton').hide(true);"
+                ],
+                "name": "show"
+            },
+            "designerId": "12527f6f-2e7d-461e-9d8f-0cb83bfa7c46"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onFormpanelInitialize",
+                "fn": "onFormpanelInitialize",
+                "implHandler": [
+                    "Ext.getCmp('SettingsButton').hide(true);"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "da3d3949-ad8f-427e-b53c-c88bf3295bbb"
+        }
+    ]
+}

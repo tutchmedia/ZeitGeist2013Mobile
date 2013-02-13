@@ -1,0 +1,46 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SandboxStore",
+        "designer|userAlias": "SandboxStore",
+        "model": "SandboxModel",
+        "storeId": "SandboxStore"
+    },
+    "id": "ExtBox1-ext-gen14712",
+    "designerId": "4d174847-38db-4795-9bee-da19ca2d5224",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy7",
+                "url": "http://api.eventsy.co.uk/web-service.php?sandbox=true&event=1"
+            },
+            "designerId": "83e1c33b-8c72-42d3-8b76-0c97aca7023f",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader7",
+                        "rootProperty": "categories"
+                    },
+                    "designerId": "f9c6e73e-f35e-40dd-bd64-053f6c263f98"
+                }
+            ]
+        }
+    ]
+}

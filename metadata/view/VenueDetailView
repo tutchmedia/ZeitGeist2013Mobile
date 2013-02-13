@@ -1,0 +1,175 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "VenueDetailView",
+        "designer|userAlias": "VenueDetailView",
+        "requires": [
+            "Ext.Map",
+            "Ext.Label"
+        ]
+    },
+    "id": "ExtBox1-ext-gen8309",
+    "designerId": "a4df516a-7120-40cf-ba15-33c356efca60",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onPanelInitialize",
+                "fn": "onPanelInitialize",
+                "implHandler": [
+                    "var record = this.getData();\r",
+                    "\r",
+                    "\r",
+                    "mapView = this.child('#VenueMap');\r",
+                    "\r",
+                    "//lat = record.get('latitude');\r",
+                    "//lon = record.get('longitude');\r",
+                    "\r",
+                    "mapView.setMapOptions({\r",
+                    "    zoom: 12\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "var myLatLng = new google.maps.LatLng(record.lat,record.long);\r",
+                    "\r",
+                    "mapView.setMapCenter({\r",
+                    "    latitude: record.lat,\r",
+                    "    longitude: record.long\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "marker = new google.maps.Marker({\r",
+                    "    title: record.title,\r",
+                    "    position: myLatLng\r",
+                    "});\r",
+                    "\r",
+                    "marker.setMap(mapView.getMap()); //or myMap.map or this.getMap()\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "console.log(record);\r",
+                    "\r",
+                    "\r",
+                    "Ext.getCmp('VenueTitle').setHtml(record.title);\r",
+                    "Ext.getCmp('VenueAddress').setHtml(record.address_1 + '<br />' + record.address_2 + '<br />' + record.postcode);\r",
+                    "\r",
+                    "\r",
+                    "Ext.getCmp('VenueTel').setText(record.tel);"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "2bbe5cff-a7f3-4b9d-bc78-b1a39625991b"
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer4",
+                "designer|displayName": "VenueInformation",
+                "height": "40%",
+                "itemId": "VenueInformation",
+                "padding": 20
+            },
+            "designerId": "38763580-dbc5-47cf-973b-123c6e1bf8da",
+            "cn": [
+                {
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyLabel",
+                        "designer|displayName": "VenueTitle",
+                        "html": "Title",
+                        "id": "VenueTitle",
+                        "itemId": "VenueTitle",
+                        "style": " font-size:32px; color:#1a6eb6; "
+                    },
+                    "designerId": "35bb51b8-0618-40fc-80f4-c566ab82433c"
+                },
+                {
+                    "type": "label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyLabel1",
+                        "designer|displayName": "VenueAddress",
+                        "id": "VenueAddress",
+                        "itemId": "VenueAddress"
+                    },
+                    "designerId": "c2d7fd6a-94a4-4179-a114-eb9b750d3782"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton19",
+                        "designer|displayName": "VenueTel",
+                        "id": "VenueTel",
+                        "itemId": "VenueTel",
+                        "ui": "confirm",
+                        "text": ""
+                    },
+                    "designerId": "38a977da-926b-4ec8-a653-e979c00d212e",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onVenueTelTap",
+                                "fn": "onVenueTelTap",
+                                "implHandler": [
+                                    "Ext.Msg.alert(\"WIP\", \"This function has not been implemented yet.\");"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "17504a20-ad86-4ca2-81e9-1a32d2fde4b2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "map",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyMap",
+                "designer|displayName": "VenueMap",
+                "height": "60%",
+                "itemId": "VenueMap"
+            },
+            "designerId": "36e11b53-6e77-40da-9cc2-77fa3a7231c8"
+        }
+    ]
+}

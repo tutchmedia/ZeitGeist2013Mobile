@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ScheduleDay2",
+        "model": "Schedule",
+        "storeId": "ScheduleDay2"
+    },
+    "id": "ExtBox1-ext-gen7073",
+    "designerId": "fcd692fa-f108-4ef4-858a-097b474ef0c0",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy3",
+                "url": "http://api.eventsy.co.uk/web-service.php?agenda=true&day=2013-05-21&event=1"
+            },
+            "designerId": "ae6b5690-da86-4c6f-b164-231c8d441dde",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader3",
+                        "rootProperty": "categories"
+                    },
+                    "designerId": "9b3627f7-42c9-40e3-8d49-5f0068cd6fd7"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "InformationStore",
+        "data": "[\r\n{\r\n    \"id\" :    \"1\",\r\n    \"title\": \"Information Desk\",\r\n    \"info\": \"For you convenience, an Information Desk will be located outside the main session room.<br /><br />Throughout the event to address questions when they arise.On Sunday this desk will be located outside the Ivory Foyer. The opening times can be found below:<br /><br />\"\r\n\r\n},\r\n{\r\n    \"id\" :    \"2\",\r\n    \"title\": \"Transportation\",\r\n    \"info\": \"\"\r\n\r\n},\r\n{\r\n    \"id\" :    \"3\",\r\n    \"title\": \"Venue Map\",\r\n    \"info\": \"\"\r\n\r\n},\r\n{\r\n    \"id\" :    \"4\",\r\n    \"title\": \"Wireless Connectivity\",\r\n    \"info\": \"\"\r\n\r\n},\r\n{\r\n    \"id\" :    \"5\",\r\n    \"title\": \"Zeitgeist Minds\",\r\n    \"info\": \"\"\r\n\r\n},\r\n{\r\n    \"id\" :    \"6\",\r\n    \"title\": \"Attire\",\r\n    \"info\": \"\"\r\n\r\n}\r\n]",
+        "model": "InformationDesk",
+        "storeId": "InformationStore"
+    },
+    "id": "ExtBox1-ext-gen40602",
+    "designerId": "d71a5807-eed7-4529-ac4f-2e7d493877ab"
+}

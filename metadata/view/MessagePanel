@@ -1,0 +1,209 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MessagePanel",
+        "designer|userAlias": "MessagePanel",
+        "requires": [
+            "Ext.dataview.List"
+        ]
+    },
+    "id": "ExtBox1-ext-gen46159",
+    "designerId": "10abf6e3-699f-4380-85ba-e8c75f8fc2d7",
+    "cn": [
+        {
+            "type": "list",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyList",
+                "designer|displayName": "Inbox",
+                "docked": null,
+                "height": "100%",
+                "itemId": "mylist5",
+                "layout": "fit",
+                "scrollable": [
+                    "vertical"
+                ],
+                "store": "MessageStore"
+            },
+            "designerId": "774ca507-e731-4d22-97b1-7be9d6bbbc28",
+            "cn": [
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "itemTpl",
+                        "implHandler": [
+                            "<div style=\"height:50px;\">\r",
+                            "    <div style=\"float:left; width:90%; \">\r",
+                            "    {username}<br />\r",
+                            "        <small>{date:date(\"d-m-Y\")}</small>\r",
+                            "    </div>\r",
+                            "    <div class=\"receipt\" style=\"float:right; width:10%; vertical-align:50px;\">!</div>\r",
+                            "</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "ddb3bbe5-d4f9-4916-bfee-89e8f0f7d08c"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMylist5ItemTap",
+                        "fn": "onMylist5ItemTap",
+                        "implHandler": [
+                            "\r",
+                            "var store = Ext.getStore('CurrentUser');\r",
+                            "\r",
+                            "\r",
+                            "var rec = store.findRecord('id', '1');\r",
+                            "var user_id = rec.get('user_id'); // get the allowMessages toggle value\r",
+                            "\r",
+                            "this.up('NavView').push({\r",
+                            "    xtype: 'readMessage',\r",
+                            "    data: record.data,\r",
+                            "    myUser: user_id,\r",
+                            "    c_id: record.data.c_id,\r",
+                            "    title: record.data.username\r",
+                            "});"
+                        ],
+                        "name": "itemtap"
+                    },
+                    "designerId": "dc33929d-07c7-48d6-9f31-5aa01dbf37ec"
+                }
+            ]
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyToolbar",
+                "docked": "bottom",
+                "style": "background-color:#000;",
+                "title": null
+            },
+            "designerId": "48e8ac00-2493-48b6-a544-5133402396a9",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton13",
+                        "docked": null,
+                        "itemId": "mybutton13",
+                        "ui": null,
+                        "iconAlign": "center",
+                        "iconCls": "refresh",
+                        "iconMask": true,
+                        "text": ""
+                    },
+                    "designerId": "92974bbb-94b9-43ea-8772-3e2bc8612f7f",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton13Tap",
+                                "fn": "onMybutton13Tap",
+                                "implHandler": [
+                                    "Ext.getStore('MessageStore').load();\r",
+                                    "\r",
+                                    "//this.getStore('SpeakerProfilesSearch').getProxy().setExtraParam('agendaspeaker', '1,2');\r",
+                                    "\r",
+                                    "console.log(\"Inbox Refreshed.\");"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "8723df23-40e6-403c-8714-a0bb615e0c89"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTabpanelInitialize",
+                "fn": "onTabpanelInitialize",
+                "implHandler": [
+                    "var store = Ext.getStore('CurrentUser');\r",
+                    "\r",
+                    "store.load();\r",
+                    "var rec = store.findRecord('id', '1');\r",
+                    "user_id = rec.get('user_id'); // get the allowMessages toggle value\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "Ext.getStore('MessageStore').getProxy().setExtraParams({\r",
+                    "    'key':'123',\r",
+                    "    'section':'inbox',\r",
+                    "    'u_id':user_id\r",
+                    "});\r",
+                    "\r",
+                    "Ext.getStore('MessageStore').load();\r",
+                    "\r",
+                    "//this.getStore('SpeakerProfilesSearch').getProxy().setExtraParam('agendaspeaker', '1,2');\r",
+                    "\r",
+                    "console.log(\"Inbox Loaded.\");"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "e663fc16-a07d-465e-828a-41e5d8eaba05"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTabpanelShow",
+                "fn": "onTabpanelShow",
+                "implHandler": [
+                    "//Ext.ComponentQuery.query('NavView')[0].getNavigationBar().add({xtype:'button',align:'right', iconCls: 'compose', iconMask: true, name: 'composeButton', id: 'composeButton', itemId: 'composeButton', ui: 'confirm', autoDestroy: false});\r",
+                    "\r",
+                    "\r",
+                    ""
+                ],
+                "name": "show"
+            },
+            "designerId": "5e741a3f-05b9-4855-93ec-aa0b33cdc13d"
+        }
+    ]
+}

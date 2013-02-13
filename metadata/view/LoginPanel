@@ -6,28 +6,23 @@
     },
     "codeClass": null,
     "userConfig": {
-        "refs": "#loginform",
         "designer|userClassName": "LoginPanel",
         "designer|userAlias": "LoginPanel",
         "requires": [
+            "Ext.form.FieldSet",
             "Ext.field.Text",
             "Ext.field.Password",
             "Ext.MessageBox"
         ],
         "designer|initialView": true,
         "html": null,
-        "id": "loginform",
-        "itemId": "loginform"
+        "id": "LoginPanel",
+        "itemId": "LoginPanel",
+        "style": null,
+        "defaults": null
     },
-    "id": "ExtBox1-ext-gen8066",
-    "designerId": "6730d4b8-32a2-4af2-ab8e-3fe35e0ded34",
-    "customConfigs": [
-        {
-            "group": "(Custom Properties)",
-            "name": "refs",
-            "type": "string"
-        }
-    ],
+    "id": "ExtBox1-ext-gen2369",
+    "designerId": "4ec17169-74e6-4d90-9ec5-5a8cae818b92",
     "cn": [
         {
             "type": "container",
@@ -37,42 +32,99 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyContainer2",
+                "designer|displayName": "LogoContainer",
+                "height": 100,
+                "style": "margin-top:20px;",
+                "layout": null
+            },
+            "designerId": "3d47a5b3-979e-4639-a9c0-817a6d47d50c",
+            "cn": [
+                {
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyImage",
+                        "height": 95,
+                        "src": "app/images/logo.png"
+                    },
+                    "designerId": "30d90a37-f9a9-409e-841f-42002898671b"
+                }
+            ]
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "designer|userClassName": "MyContainer",
-                "html": "Welcome to Zeitgeist 2013.<br /><br /> <small>To proceed you must have a valid username and password sent to you in your welcome email.</small>",
-                "padding": 10,
-                "style": "margin-bottom:20px;"
+                "designer|displayName": "LoginText",
+                "height": "50px",
+                "html": "Welcome to Google Zeitgeist 2013",
+                "style": "font-size:12px;",
+                "width": "px"
             },
-            "designerId": "2ae84565-e020-4656-b6d2-f4b1c9a5f421"
+            "designerId": "ea3a9978-f0a1-46ed-a90e-9341b66107f9"
         },
         {
-            "type": "textfield",
+            "type": "fieldset",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTextField",
-                "style": "border-radius:10px;",
-                "label": "User",
-                "name": "username"
+                "designer|userClassName": "MyFieldSet",
+                "id": "LoginForm",
+                "defaults": null,
+                "title": ""
             },
-            "designerId": "dbcec645-54bc-4a05-9f93-ff31b3c18557"
-        },
-        {
-            "type": "passwordfield",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyPasswordField",
-                "style": "margin-top:20px; border-radius:10px;",
-                "label": "Pass",
-                "name": "password"
-            },
-            "designerId": "cbbb17eb-37aa-4c69-ad3a-5d5cb922807c"
+            "designerId": "1290fbba-073e-42d5-8753-9709e6c905ca",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField",
+                        "id": "userfield",
+                        "itemId": "userfield",
+                        "label": null,
+                        "name": "username",
+                        "autoComplete": false,
+                        "placeHolder": "Username"
+                    },
+                    "designerId": "b89e65ed-530d-4103-9925-ef92c5877c45"
+                },
+                {
+                    "type": "passwordfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPasswordField",
+                        "designer|displayName": "password",
+                        "id": "passfield",
+                        "itemId": "passfield",
+                        "label": null,
+                        "name": "password",
+                        "placeHolder": "Password"
+                    },
+                    "designerId": "3a665f8e-480b-4076-8065-ed559959af06"
+                }
+            ]
         },
         {
             "type": "button",
@@ -83,12 +135,11 @@
             "codeClass": null,
             "userConfig": {
                 "designer|userClassName": "MyButton",
-                "itemId": "submitLoginForm",
-                "style": "margin-top:20px;",
+                "itemId": "mybutton",
                 "ui": "confirm",
                 "text": "Login"
             },
-            "designerId": "8bf73347-b443-468d-b878-fe12981ecc28",
+            "designerId": "ff348c39-b682-4cfe-97e6-7509f5766dd8",
             "cn": [
                 {
                     "type": "basiceventbinding",
@@ -98,32 +149,112 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "submitLoginForm",
-                        "fn": "submitLoginForm",
+                        "designer|userClassName": "onMybuttonTap",
+                        "fn": "onMybuttonTap",
                         "implHandler": [
-                            "var values = this.getValues();",
-                            "",
-                            "this.submit({",
-                            "    url: 'http://192.168.0.12:8888/web/checkLogin.php',",
-                            "    method: 'POST',",
-                            "    success: function(response) {",
-                            "        // do whatever you need to with the generated HTML",
-                            "        //window.location = 'app.html';",
-                            "        //this.up('Main').push({ title: 'Dashboard', xtype: 'Dashboard'});",
-                            "",
-                            "",
-                            "        Ext.Viewport.setActiveItem('Main');",
-                            "",
-                            "    },",
-                            "    failure: function(response){",
-                            "        // Do failure message",
-                            "        Ext.Msg.alert('Login Failed', \"Sorry, we couldn't log you in. Please check your details and try again.\");",
-                            "    }",
+                            "Ext.Ajax.request({\r",
+                            "    url: 'http://api.eventsy.co.uk/checkLogin.php',\r",
+                            "    method: 'POST',\r",
+                            "    defaultHeaders : 'application/json', \r",
+                            "\r",
+                            "    params: {\r",
+                            "        username: Ext.getCmp('userfield').getValue(),\r",
+                            "        password: Ext.getCmp('passfield').getValue()\r",
+                            "    },\r",
+                            "\r",
+                            "\r",
+                            "    success : function(response, opt) {\r",
+                            "\r",
+                            "        var text = response.responseText;\r",
+                            "\r",
+                            "        var text1 = Ext.JSON.decode(text);\r",
+                            "\r",
+                            "        var check = text1.success;\r",
+                            "        var check_fail = text1.failure;\r",
+                            "\r",
+                            "\r",
+                            "        var userid = text1.user_id;\r",
+                            "        var allow_messages = text1.allow_messaging;\r",
+                            "        var user_name = text1.username;\r",
+                            "\r",
+                            "\r",
+                            "        if(allow_messages == 1)\r",
+                            "        {\r",
+                            "            var popup = 1;\r",
+                            "        } else {\r",
+                            "            var popup = 0;\r",
+                            "        }\r",
+                            "\r",
+                            "\r",
+                            "        // If success comes back then proceed\r",
+                            "        if(check === true)\r",
+                            "        {\r",
+                            "\r",
+                            "\r",
+                            "            var user = Ext.create('Google.model.CurrentUser', {\r",
+                            "                id: 1,\r",
+                            "                user_id: userid,\r",
+                            "                username: user_name,\r",
+                            "                showPopup: popup,\r",
+                            "                allowMessages: allow_messages\r",
+                            "            });\r",
+                            "\r",
+                            "\r",
+                            "            user.save({\r",
+                            "                success: function() {\r",
+                            "                    console.log(\"The data should now be saved.\");\r",
+                            "                }\r",
+                            "            }, this);\r",
+                            "\r",
+                            "            console.log(\"Logged User In.\");\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "            // Pre download from the web to local stores\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "            // After all the initializing proceed to the dashboard\r",
+                            "\r",
+                            "            Ext.Viewport.setActiveItem('NavView');    \r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "        }\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "        // If failure comes back then stop and show the message\r",
+                            "        if(check_fail === true)\r",
+                            "        {\r",
+                            "            Ext.Msg.alert('Login Failed', \"Sorry, we couldn't log you in. Please check your details and try again.\");\r",
+                            "        }\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "    },\r",
+                            "\r",
+                            "    failure : function(response, opt) {\r",
+                            "        // Do failure message\r",
+                            "        Ext.Msg.alert('Login Failed', \"Sorry, we couldn't log you in. Please check your details and try again.\");\r",
+                            "    }\r",
                             "});"
                         ],
                         "name": "tap"
                     },
-                    "designerId": "143134ba-019d-45a8-a1a1-c96609b90893"
+                    "designerId": "4b995356-9922-4679-89f2-b2185abb99d0"
                 }
             ]
         }

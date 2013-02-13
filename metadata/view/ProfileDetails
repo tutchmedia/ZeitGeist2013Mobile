@@ -1,0 +1,72 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ProfileDetails",
+        "designer|userAlias": "profileDetails",
+        "padding": 10,
+        "scrollable": "vertical"
+    },
+    "id": "ExtBox1-ext-gen47564",
+    "designerId": "6b5cf843-dec0-4c5e-b4d7-bf87077d3c42",
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tpl",
+                "implHandler": [
+                    "<div class=\"profile-top-info\">\r",
+                    "    \r",
+                    "    <div class=\"speakerImage\">\r",
+                    "        <img src=\"{image}\" />\r",
+                    "    </div>\r",
+                    "    \r",
+                    "    <div class=\"profile-top-details\">\r",
+                    "        {full_name} <br />\r",
+                    "        {quick_bio}\r",
+                    "    </div>\r",
+                    "</div>\r",
+                    "\r",
+                    "<div class=\"profile-bio\">\r",
+                    "    \r",
+                    "    <div class=\"blue-bar-small\">\r",
+                    "    \r",
+                    "        Bio\r",
+                    "    \r",
+                    "    </div>\r",
+                    "        <div class=\"bio-full\">\r",
+                    "            <div class=\"width-change\">\r",
+                    "                {bio}\r",
+                    "            </div>\r",
+                    "        </div>\r",
+                    "            \r",
+                    "        \r",
+                    "        <br />\r",
+                    "        <br />\r",
+                    "        <a target=\"_blank\" href=\"{web_address}\">{web_address}</a>\r",
+                    "\r",
+                    "\r",
+                    "    <div class=\"blue-bar-small\">\r",
+                    "    \r",
+                    "        Events\r",
+                    "    \r",
+                    "    </div>\r",
+                    "\r",
+                    "\r",
+                    "</div>"
+                ],
+                "designer|displayName": "tpl"
+            },
+            "designerId": "e0262fd8-bb7d-443e-ae7b-faa793cbdcf7"
+        }
+    ]
+}

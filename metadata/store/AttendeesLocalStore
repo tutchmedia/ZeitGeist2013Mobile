@@ -1,0 +1,17 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "AttendeesLocalStore",
+        "designer|userAlias": "AttendeesLocalStore",
+        "autoLoad": true,
+        "model": "AttendeesList",
+        "storeId": "AttendeesLocalStore"
+    },
+    "id": "ExtBox1-ext-gen16474",
+    "designerId": "3117c92a-b5fe-4f71-9013-af8ff1f95a7d"
+}

@@ -1,0 +1,154 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "refs": "#loginform",
+        "designer|userClassName": "AskQuestion",
+        "designer|userAlias": "AskQuestion",
+        "requires": [
+            "Ext.field.TextArea"
+        ],
+        "html": null,
+        "id": "loginform"
+    },
+    "id": "ExtBox1-ext-gen9125",
+    "designerId": "1a4fb171-81e6-457f-88a0-04adb521d214",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "refs",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "EventID",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer7",
+                "height": "100px",
+                "html": "Ask a Question allows you to submit a question to the current speaker.",
+                "padding": "5px"
+            },
+            "designerId": "aa1d6ad5-e8aa-45b4-adad-7df3d93d4b85"
+        },
+        {
+            "type": "textareafield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTextArea",
+                "label": "Question",
+                "name": "question"
+            },
+            "designerId": "a39ef4f0-9ac1-425b-ac05-52d89435bafb"
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton9",
+                "itemId": "submitLoginForm",
+                "margin": "",
+                "style": "margin-top:10px;",
+                "top": "",
+                "ui": "confirm",
+                "pressedCls": "question-button",
+                "text": "Ask"
+            },
+            "designerId": "758f1afc-dc0e-4a9a-8a4b-4ff20a2db867",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "submitLoginForm",
+                        "fn": "submitLoginForm",
+                        "implHandler": [
+                            "var values = this.getValues();\r",
+                            "//console.log(values);\r",
+                            "\r",
+                            "var eventID = this.getInitialConfig('EventID');\r",
+                            "\r",
+                            "console.log(eventID);\r",
+                            "\r",
+                            "this.submit({\r",
+                            "    url: 'http://api.eventsy.co.uk/question.php?event=1',\r",
+                            "    method: 'POST',\r",
+                            "    success: function(response) {\r",
+                            "        // do whatever you need to with the generated HTML\r",
+                            "        Ext.Msg.alert(\"Success\", \"Your question has been submitted.\");\r",
+                            "        this.reset();\r",
+                            "        Ext.getCmp('NavView').pop();\r",
+                            "    },\r",
+                            "    failure: function(response){\r",
+                            "        // Do failure message\r",
+                            "        Ext.Msg.alert(\"Failed\",\"Sorry, you cannot send a blank question.\");\r",
+                            "    }\r",
+                            "});"
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "da578923-ddaa-4dd2-91a4-017dc8ba17fd"
+                }
+            ]
+        },
+        {
+            "type": "template",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tpl",
+                "implHandler": [
+                    ""
+                ],
+                "designer|displayName": "tpl"
+            },
+            "designerId": "30226dfd-2d3f-4b3e-90c9-8ecdb97941cc"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onLoginformInitialize",
+                "fn": "onLoginformInitialize",
+                "implHandler": [
+                    "Ext.getCmp('AskQuestionButton').hide(true);"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "d1b37beb-3a5a-46cf-94de-ce5267cd8a10"
+        }
+    ]
+}

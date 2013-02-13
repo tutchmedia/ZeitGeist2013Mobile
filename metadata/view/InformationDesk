@@ -1,0 +1,76 @@
+{
+    "type": "list",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "InformationDesk",
+        "designer|userAlias": "InformationDesk",
+        "style": null,
+        "store": "InformationStore"
+    },
+    "id": "ExtBox1-ext-gen41613",
+    "designerId": "a6a42e31-1517-4f98-ad3f-753028ac517b",
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<div class=\"blue-text-norm-small\">{title}</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "f89826c0-148f-405e-a236-0add88b2e3a4"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onListInitialize",
+                "fn": "onListInitialize",
+                "implHandler": [
+                    "// Load in the stores\r",
+                    "\r",
+                    "\r",
+                    "//Load the Speakers Store in\r",
+                    "Ext.getStore('InformationStore').load();"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "85acd360-4757-4337-b776-894c9009f145"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onListItemTap",
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "this.up('NavView').push({\r",
+                    "    xtype: 'InfoPanel',\r",
+                    "    data: record.data,\r",
+                    "    title: 'Details'\r",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "e061fda4-6548-4191-b78e-f7df65163cb7"
+        }
+    ]
+}

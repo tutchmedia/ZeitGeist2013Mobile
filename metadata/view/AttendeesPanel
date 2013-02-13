@@ -1,0 +1,51 @@
+{
+    "type": "tabpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "AttendeesPanel",
+        "designer|userAlias": "AttendeesPanel",
+        "ui": "light"
+    },
+    "id": "ExtBox1-ext-gen3507",
+    "designerId": "bf77493f-5beb-4144-bb62-c9009b22565a",
+    "cn": [
+        {
+            "type": "dataview",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Guests",
+                "designer|userClassName": "MyDataView1",
+                "designer|displayName": "Guests",
+                "defaultType": "MyDataItem",
+                "store": "AttendeesWebStore",
+                "useComponents": true
+            },
+            "designerId": "49f5920a-ffb9-452f-86ed-18f0483ddea1"
+        },
+        {
+            "type": "dataview",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Google",
+                "designer|userClassName": "MyDataView1",
+                "designer|displayName": "Google",
+                "defaultType": "MyDataItem1",
+                "store": "AttendeesGoogleStore",
+                "useComponents": true
+            },
+            "designerId": "e33942b8-ebde-49af-897f-e4e0ee908832"
+        }
+    ]
+}

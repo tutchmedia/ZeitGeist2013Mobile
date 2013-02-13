@@ -22,16 +22,99 @@ Ext.application({
 
     },
 
+    models: [
+        'CurrentUser',
+        'MessageList',
+        'AttendeesList',
+        'Schedule',
+        'SpeakersList',
+        'LocalVenues',
+        'SandboxModel',
+        'ActivitiesList',
+        'InformationDesk'
+    ],
+    stores: [
+        'CurrentUser',
+        'MessageStore',
+        'AttendeesWebStore',
+        'AttendeesLocalStore',
+        'MessageRead',
+        'ScheduleDay1',
+        'ScheduleDay2',
+        'ScheduleDay3',
+        'SpeakersStore',
+        'LocalVenues',
+        'SandboxStore',
+        'ActivitiesStore',
+        'InformationStore',
+        'AttendeesGoogleStore'
+    ],
     views: [
-        'Main',
         'LoginPanel',
         'Dashboard',
-        'Schedule'
+        'NavView',
+        'SettingsPanel',
+        'MessagePanel',
+        'ComposePanel',
+        'AgendaPanel',
+        'AttendeesPanel',
+        'MyDataItem',
+        'readMessage',
+        'EventDetailView',
+        'SpeakersList',
+        'VenueList',
+        'VenueDetailView',
+        'CreativeList',
+        'SandboxDetails',
+        'ActivitiesPanel',
+        'ActivityPanel',
+        'InformationDesk',
+        'InfoPanel',
+        'ProfileDetails',
+        'MyDataItem1',
+        'AskQuestion'
     ],
     name: 'Google',
 
     launch: function() {
+        var me = this;
 
+        Ext.ModelMgr.getModel('Google.model.CurrentUser').load(1, {
+            scope : this,
+            success : function(cachedLoggedInUser) {
+                delete cachedLoggedInUser.phantom;
+                // fill up the store.
+                var store = Ext.getStore('CurrentUser');
+                store.add(cachedLoggedInUser);
+
+
+                console.info('Auto-Login succeeded.');
+                Ext.Viewport.setActiveItem('NavView');
+
+            },
+            failure : function() {
+                console.warn('Auto-Login failed (user was not logged in).');
+                // user is not logged in, show the login
+                //Ext.Viewport.setActiveItem('LoginPanel');
+                //Google.app.switchMainView('Google.view.LoginPanel');
+            }
+        });
+
+
+        // This will show a spinner icon when logging in and any network communications
+
+        Ext.Viewport.add({
+            xtype: 'loadmask',
+            id: 'ajaxMask',
+            message: 'Loading...',
+            indicator: true,
+            hidden: true
+        });
+
+
+        Ext.Ajax.on('beforerequest', function() { Ext.getCmp('ajaxMask').show(); }, this); 
+        Ext.Ajax.on('requestcomplete', function() { Ext.getCmp('ajaxMask').hide(); }, this); 
+        Ext.Ajax.on('requestexception', function() { Ext.getCmp('ajaxMask').hide(); }, this);
         Ext.create('Google.view.LoginPanel', {fullscreen: true});
     }
 

@@ -1,0 +1,407 @@
+{
+    "type": "formpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "readMessage",
+        "designer|userAlias": "readMessage",
+        "requires": [
+            "Ext.field.Hidden"
+        ],
+        "id": null,
+        "itemId": "test1",
+        "style": null,
+        "scrollable": [
+            "false"
+        ],
+        "submitOnAction": [
+            "true"
+        ]
+    },
+    "configAlternates": {
+        "isUser": "object"
+    },
+    "id": "ExtBox1-ext-gen57564",
+    "designerId": "ddb70fa1-62d3-4536-a33c-6331cb9a0d71",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "userID",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "full_name",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "myUser",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "c_id",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "list",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyList5",
+                "designer|displayName": "MessageRead",
+                "bottom": null,
+                "docked": "top",
+                "height": "80%",
+                "id": "MessageRead",
+                "itemId": "MessageRead",
+                "style": null,
+                "ui": null,
+                "layout": "fit",
+                "scrollable": [
+                    "vertical"
+                ],
+                "scrollToTopOnRefresh": false,
+                "store": "MessageRead",
+                "disableSelection": true
+            },
+            "configAlternates": {
+                "isUser": "object"
+            },
+            "designerId": "d74d4684-e199-4588-b6c8-35550b7f021a",
+            "cn": [
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "itemTpl",
+                        "implHandler": [
+                            "\r",
+                            "\r",
+                            "<tpl if=\"values.user_id == this.getStringValue(values)\">\r",
+                            "    <div style=\"float:right; background-color:#30BFFC; padding:5px; margin-bottom:10px;\">\r",
+                            "    <small>{message}</small>\r",
+                            "    </div>\r",
+                            "<tpl else>\r",
+                            "    <div style=\"float:left; background-color:#D7D7D7; padding:5px; margin-bottom:10px;\">\r",
+                            "    <small>{message}</small>\r",
+                            "    </div>\r",
+                            "</tpl>"
+                        ],
+                        "designer|displayName": "itemTpl",
+                        "disableFormats": true
+                    },
+                    "designerId": "02577ff6-655e-43e7-9974-3afbe3aca170",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "getStringValue",
+                                "fn": "getStringValue",
+                                "designer|params": [
+                                    "values"
+                                ],
+                                "implHandler": [
+                                    "// Test the new read mesage\r",
+                                    "\r",
+                                    "var store = Ext.getStore('CurrentUser');\r",
+                                    "\r",
+                                    "\r",
+                                    "var rec = store.findRecord('id', '1');\r",
+                                    "var user_id = rec.get('user_id'); // get the allowMessages toggle value\r",
+                                    "\r",
+                                    "\r",
+                                    "return user_id;"
+                                ]
+                            },
+                            "designerId": "f093056b-1bae-4500-9696-82a86dff96e3"
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMessageReadShow",
+                        "fn": "onMessageReadShow",
+                        "implHandler": [
+                            "//This is where the view will scroll to the end of the messages.\r",
+                            "\r",
+                            ""
+                        ],
+                        "name": "show"
+                    },
+                    "designerId": "44187645-6492-49de-bf38-bc0eaacc25f7"
+                }
+            ]
+        },
+        {
+            "type": "fieldset",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFieldSet1",
+                "docked": "bottom",
+                "height": "20%",
+                "title": null
+            },
+            "designerId": "4559e746-e4c0-41e2-8ee6-c2366f3925f1",
+            "cn": [
+                {
+                    "type": "textareafield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextArea",
+                        "height": "70%",
+                        "id": "message",
+                        "label": null,
+                        "name": "message",
+                        "placeHolder": "Reply",
+                        "maxRows": 2
+                    },
+                    "designerId": "4b468390-7c79-4aed-b1cd-bbf08c6777ff"
+                },
+                {
+                    "type": "hiddenfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyHiddenField",
+                        "designer|displayName": "user_id",
+                        "id": "user_id",
+                        "name": "user_id"
+                    },
+                    "designerId": "a3d645a5-ff09-442a-80f0-8f3ea7415f0a"
+                },
+                {
+                    "type": "hiddenfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyHiddenField1",
+                        "id": "from",
+                        "name": "from"
+                    },
+                    "designerId": "fa550084-bd34-45f9-8b9b-9ee822e45f0c"
+                },
+                {
+                    "type": "hiddenfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyHiddenField5",
+                        "designer|displayName": "c_id",
+                        "id": "c_id",
+                        "name": "c_id"
+                    },
+                    "designerId": "940a9a8b-73b0-4cca-acc2-3a7a38b81dbe"
+                },
+                {
+                    "type": "hiddenfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyHiddenField6",
+                        "designer|displayName": "full_name",
+                        "id": "full_name",
+                        "name": "full_name"
+                    },
+                    "designerId": "2387d2da-8a8e-44e8-ba44-b1f8dc8b89d4"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton14",
+                        "itemId": "mybutton",
+                        "ui": "confirm",
+                        "text": "Send"
+                    },
+                    "designerId": "0902565a-374f-4434-acff-3ee904f9e03b",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybuttonTap1",
+                                "fn": "onMybuttonTap1",
+                                "implHandler": [
+                                    "var values = this.getValues();\r",
+                                    "//console.log(values);\r",
+                                    "\r",
+                                    "this.submit({\r",
+                                    "    url: 'http://api.eventsy.co.uk/message.php',\r",
+                                    "    method: 'POST',\r",
+                                    "    success: function(response) {\r",
+                                    "        // do whatever you need to with the generated HTML\r",
+                                    "        Ext.Msg.alert(\"Sent\", \"Your message has been sent.\");\r",
+                                    "        this.reset();\r",
+                                    "        this.up('NavView').pop();\r",
+                                    "    },\r",
+                                    "    failure: function(response){\r",
+                                    "        // Do failure message\r",
+                                    "        Ext.Msg.alert(\"Failed\", \"Sorry, you cannot send a blank message.\");\r",
+                                    "    }\r",
+                                    "});"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "1e7fd6a9-9a35-42d4-9083-c8fbdbfa133b"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onFormpanelInitialize",
+                "fn": "onFormpanelInitialize",
+                "implHandler": [
+                    "\r",
+                    "var record = this.getData();\r",
+                    "\r",
+                    "var username = record.username;\r",
+                    "var userID = record.user_id;\r",
+                    "var from = record.recipient;\r",
+                    "//var message = record.message;\r",
+                    "var c_id = record.c_id;\r",
+                    "\r",
+                    "\r",
+                    "// Test the new read mesage\r",
+                    "\r",
+                    "var store = Ext.getStore('CurrentUser');\r",
+                    "\r",
+                    "\r",
+                    "var rec = store.findRecord('id', '1');\r",
+                    "var user_id = rec.get('user_id'); // get the allowMessages toggle value\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "//var new_mess = message.replace(/-break-/g, \"\\n\");\r",
+                    "\r",
+                    "\r",
+                    "// Stick the name in the recipient field\r",
+                    "\r",
+                    "Ext.getCmp('full_name').setValue(username);\r",
+                    "Ext.getCmp('user_id').setValue(userID);\r",
+                    "Ext.getCmp('from').setValue(from);\r",
+                    "//Ext.getCmp('fromMessage').setValue(new_mess);\r",
+                    "Ext.getCmp('c_id').setValue(c_id);\r",
+                    "\r",
+                    "\r",
+                    "// The MessagRead List Stuff\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "var cid = this.getInitialConfig('c_id');\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "Ext.getStore('MessageRead').getProxy().setExtraParams({\r",
+                    "    'key':'123',\r",
+                    "    'section':'message',\r",
+                    "    'convo': c_id\r",
+                    "});\r",
+                    "\r",
+                    "Ext.getStore('MessageRead').load();\r",
+                    "\r",
+                    "//this.getStore('SpeakerProfilesSearch').getProxy().setExtraParam('agendaspeaker', '1,2');\r",
+                    "\r",
+                    "console.log(\"Message Text Loaded.\");\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "designerId": "cfead834-3175-4ee9-8406-180a9fb6357c"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTest1Show",
+                "fn": "onTest1Show",
+                "implHandler": [
+                    "// Scroll to the end of the list.\r",
+                    "\r",
+                    "MessageRead = this.child('#MessageRead');\r",
+                    "\r",
+                    "var scroller = MessageRead.getScrollable().getScroller();\r",
+                    "\r",
+                    "\r",
+                    "//scroller.refresh().scrollTo(0,496);\r",
+                    "\r",
+                    "\r",
+                    "scroller.refresh();\r",
+                    "\r",
+                    "\r",
+                    "console.log(scroller);"
+                ],
+                "name": "show"
+            },
+            "designerId": "c5ff0aa5-332e-4ec9-8ccb-433857f495d6"
+        }
+    ]
+}

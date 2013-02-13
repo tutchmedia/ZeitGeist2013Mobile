@@ -1,0 +1,152 @@
+{
+    "type": "navigationview",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NavView",
+        "designer|userAlias": "NavView",
+        "id": "NavView",
+        "itemId": "NavView"
+    },
+    "id": "ExtBox1-ext-gen9664",
+    "designerId": "bb7a91ec-ac7f-4927-93f5-1ce91a06851b",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": null
+            },
+            "designerId": "5651e2e7-c11e-4ef5-bd42-904103063def",
+            "masterInstanceId": "ExtBox1-ext-gen9431"
+        },
+        {
+            "type": "navigationbar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyNavigationBar",
+                "designer|displayName": "Google",
+                "style": "background-color:#000;"
+            },
+            "designerId": "748ecb42-3732-43ab-a6d9-ab972b187d00",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "align": "left",
+                        "designer|userClassName": "MyButton12",
+                        "designer|displayName": "SettingsButton",
+                        "id": "SettingsButton",
+                        "itemId": "SettingsButton",
+                        "badgeText": null,
+                        "iconCls": "settings",
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "7b53f3cb-0da7-47e0-9dc1-01f95d2ffae9",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton11Tap",
+                                "fn": "onMybutton11Tap",
+                                "implHandler": [
+                                    "this.push({\r",
+                                    "    title: 'Settings',\r",
+                                    "    xtype: 'SettingsPanel'\r",
+                                    "});\r",
+                                    "\r",
+                                    "\r",
+                                    "// Hide Settings, Logout and Messages buttons\r",
+                                    "\r",
+                                    "Ext.getCmp('MessageButton').hide(true);\r",
+                                    "Ext.getCmp('SettingsButton').hide(true);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "66801c48-b960-48cc-9340-5f1d75400aeb"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "EventID": null,
+                        "align": "right",
+                        "designer|userClassName": "MyButton18",
+                        "designer|displayName": "AskQuestion",
+                        "hidden": true,
+                        "id": "AskQuestionButton",
+                        "itemId": "AskQuestionButton",
+                        "ui": "confirm",
+                        "iconAlign": "right",
+                        "text": "Ask Question"
+                    },
+                    "designerId": "faf0df5b-d874-4552-acc9-b35fe6655e41",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "EventID",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onAskQuestionButtonTap",
+                                "fn": "onAskQuestionButtonTap",
+                                "implHandler": [
+                                    "// Go to the Ask A Question panel and try to include the specific id of the event it was pressed on\r",
+                                    "var test = button.getInitialConfig('EventID');\r",
+                                    "\r",
+                                    "Ext.getCmp('NavView').push({\r",
+                                    "    xtype: 'AskQuestion',\r",
+                                    "    title: 'Details',\r",
+                                    "    EventID: test\r",
+                                    "});\r",
+                                    "\r",
+                                    "console.log(test);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "88826c3c-4153-4d34-a548-976885f57007"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -18,67 +18,169 @@ Ext.define('Google.view.LoginPanel', {
     alias: 'widget.LoginPanel',
 
     requires: [
+        'Ext.form.FieldSet',
         'Ext.field.Text',
         'Ext.field.Password',
         'Ext.MessageBox'
     ],
 
     config: {
-        refs: '#loginform',
-        id: 'loginform',
-        itemId: 'loginform',
+        id: 'LoginPanel',
+        itemId: 'LoginPanel',
         items: [
             {
                 xtype: 'container',
-                html: 'Welcome to Zeitgeist 2013.<br /><br /> <small>To proceed you must have a valid username and password sent to you in your welcome email.</small>',
-                padding: 10,
-                style: 'margin-bottom:20px;'
+                height: 100,
+                style: 'margin-top:20px;',
+                items: [
+                    {
+                        xtype: 'image',
+                        height: 95,
+                        src: 'app/images/logo.png'
+                    }
+                ]
             },
             {
-                xtype: 'textfield',
-                style: 'border-radius:10px;',
-                label: 'User',
-                name: 'username'
+                xtype: 'container',
+                height: '50px',
+                html: 'Welcome to Google Zeitgeist 2013',
+                style: 'font-size:12px;',
+                width: 'px'
             },
             {
-                xtype: 'passwordfield',
-                style: 'margin-top:20px; border-radius:10px;',
-                label: 'Pass',
-                name: 'password'
+                xtype: 'fieldset',
+                id: 'LoginForm',
+                title: '',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        id: 'userfield',
+                        itemId: 'userfield',
+                        name: 'username',
+                        autoComplete: false,
+                        placeHolder: 'Username'
+                    },
+                    {
+                        xtype: 'passwordfield',
+                        id: 'passfield',
+                        itemId: 'passfield',
+                        name: 'password',
+                        placeHolder: 'Password'
+                    }
+                ]
             },
             {
                 xtype: 'button',
-                itemId: 'submitLoginForm',
-                style: 'margin-top:20px;',
+                itemId: 'mybutton',
                 ui: 'confirm',
                 text: 'Login'
             }
         ],
         listeners: [
             {
-                fn: 'submitLoginForm',
+                fn: 'onMybuttonTap',
                 event: 'tap',
-                delegate: '#submitLoginForm'
+                delegate: '#mybutton'
             }
         ]
     },
 
-    submitLoginForm: function(button, e, options) {
-        var values = this.getValues();
-
-        this.submit({
-            url: 'http://192.168.0.12:8888/web/checkLogin.php',
+    onMybuttonTap: function(button, e, options) {
+        Ext.Ajax.request({
+            url: 'http://api.eventsy.co.uk/checkLogin.php',
             method: 'POST',
-            success: function(response) {
-                // do whatever you need to with the generated HTML
-                //window.location = 'app.html';
-                //this.up('Main').push({ title: 'Dashboard', xtype: 'Dashboard'});
+            defaultHeaders : 'application/json', 
+
+            params: {
+                username: Ext.getCmp('userfield').getValue(),
+                password: Ext.getCmp('passfield').getValue()
+            },
 
 
-                Ext.Viewport.setActiveItem('Main');
+            success : function(response, opt) {
+
+                var text = response.responseText;
+
+                var text1 = Ext.JSON.decode(text);
+
+                var check = text1.success;
+                var check_fail = text1.failure;
+
+
+                var userid = text1.user_id;
+                var allow_messages = text1.allow_messaging;
+                var user_name = text1.username;
+
+
+                if(allow_messages == 1)
+                {
+                    var popup = 1;
+                } else {
+                    var popup = 0;
+                }
+
+
+                // If success comes back then proceed
+                if(check === true)
+                {
+
+
+                    var user = Ext.create('Google.model.CurrentUser', {
+                        id: 1,
+                        user_id: userid,
+                        username: user_name,
+                        showPopup: popup,
+                        allowMessages: allow_messages
+                    });
+
+
+                    user.save({
+                        success: function() {
+                            console.log("The data should now be saved.");
+                        }
+                    }, this);
+
+                    console.log("Logged User In.");
+
+
+
+
+
+                    // Pre download from the web to local stores
+
+
+
+
+
+
+
+
+                    // After all the initializing proceed to the dashboard
+
+                    Ext.Viewport.setActiveItem('NavView');    
+
+
+
+
+                }
+
+
+
+                // If failure comes back then stop and show the message
+                if(check_fail === true)
+                {
+                    Ext.Msg.alert('Login Failed', "Sorry, we couldn't log you in. Please check your details and try again.");
+                }
+
+
+
+
+
+
 
             },
-            failure: function(response){
+
+            failure : function(response, opt) {
                 // Do failure message
                 Ext.Msg.alert('Login Failed', "Sorry, we couldn't log you in. Please check your details and try again.");
             }

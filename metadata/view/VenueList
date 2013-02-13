@@ -1,0 +1,79 @@
+{
+    "type": "list",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "VenueList",
+        "designer|userAlias": "VenueList",
+        "store": "LocalVenues"
+    },
+    "id": "ExtBox1-ext-gen2451",
+    "designerId": "cd47005a-b279-4618-8a23-90007b809f56",
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<div>\r",
+                    "    <div class=\"attendee-name\">{title}</div>\r",
+                    "    <small>{address_1}</small><br />\r",
+                    "    <small>{address_2}</small>\r",
+                    "</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "4a7b5001-a3bf-40e6-8fab-c7b92d90b9ba"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onListInitialize",
+                "fn": "onListInitialize",
+                "implHandler": [
+                    "// Load in the stores\r",
+                    "\r",
+                    "\r",
+                    "//Load the Speakers Store in\r",
+                    "Ext.getStore('LocalVenues').load();"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "7b08f171-beaa-4a09-81aa-1548d67632a3"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onListItemTap",
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "this.up('NavView').push({\r",
+                    "    xtype: 'VenueDetailView',\r",
+                    "    data: record.data,\r",
+                    "    title: 'Details'\r",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "8823d186-917c-4249-b878-d8f0092b7eec"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "InformationDesk"
+    },
+    "id": "ExtBox1-ext-gen39988",
+    "designerId": "93fd8fa6-3444-4e81-a175-e9927d11f3d0",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field62",
+                "name": "id"
+            },
+            "designerId": "28d64ad5-ce7f-47d7-a230-9f55f37bf027"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field63",
+                "name": "title"
+            },
+            "designerId": "323acf45-5e13-443b-b8ce-ed8a79293325"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field64",
+                "name": "info"
+            },
+            "designerId": "3ddd5ec8-8bf4-43f8-9103-8a84d0b5f6b1"
+        }
+    ]
+}

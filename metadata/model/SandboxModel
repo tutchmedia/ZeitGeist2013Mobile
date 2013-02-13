@@ -1,0 +1,93 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SandboxModel"
+    },
+    "id": "ExtBox1-ext-gen13675",
+    "designerId": "0e9342da-1b45-42ea-a136-ee405c664d08",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field48",
+                "name": "id"
+            },
+            "designerId": "e9b09802-19be-4763-aa60-12a2476d9927"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field49",
+                "name": "title"
+            },
+            "designerId": "e63f3f79-2bd8-45cc-8b63-b4d52fad5aab"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field50",
+                "name": "info"
+            },
+            "designerId": "ec27adb4-d230-4d22-ae48-0eb965a63c5f"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field51",
+                "name": "icon"
+            },
+            "designerId": "eed8a3cb-9f4e-44e5-a088-7426278cfd6d"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field52",
+                "name": "website"
+            },
+            "designerId": "4ccb2cea-840d-44e0-a16d-b8cf2ae6ca54"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field53",
+                "name": "event_id"
+            },
+            "designerId": "b833b3bf-ea86-49ab-944b-a1437c84540b"
+        }
+    ]
+}

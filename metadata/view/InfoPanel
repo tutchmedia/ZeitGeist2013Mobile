@@ -1,0 +1,33 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "InfoPanel",
+        "designer|userAlias": "InfoPanel",
+        "padding": 20
+    },
+    "id": "ExtBox1-ext-gen45089",
+    "designerId": "b9bda3ea-08aa-4add-a12e-fe3f752b3e9d",
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tpl",
+                "implHandler": [
+                    "{info}"
+                ],
+                "designer|displayName": "tpl"
+            },
+            "designerId": "4eed20e2-fa32-48dc-88e7-c8af9a948a09"
+        }
+    ]
+}

@@ -1,0 +1,243 @@
+{
+    "type": "tabpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "AgendaPanel",
+        "designer|userAlias": "AgendaPanel",
+        "requires": [
+            "Ext.plugin.PullRefresh"
+        ],
+        "style": null,
+        "ui": "light"
+    },
+    "id": "ExtBox1-ext-gen2278",
+    "designerId": "61ec8fcd-a72a-4f12-891a-1cbf49262bd4",
+    "cn": [
+        {
+            "type": "list",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Day 1",
+                "badgeText": null,
+                "designer|userClassName": "MyList4",
+                "designer|displayName": "Sunday",
+                "itemId": "mylist",
+                "store": "ScheduleDay1"
+            },
+            "designerId": "0da328ee-03b0-4a51-9d5d-a4cd193da23d",
+            "cn": [
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"padding\">\r",
+                            "    <small><b>{time} - {until}</b></small>\r",
+                            "    <br />\r",
+                            "    <div class=\"agendaTitle\">{title}</div>\r",
+                            "    <small>{location}</small>\r",
+                            "</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "1c366ff9-ec6f-4021-b798-381fa05de692"
+                },
+                {
+                    "type": "pullrefresh",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPullRefreshPlugin"
+                    },
+                    "designerId": "567aa198-d7e2-4c57-9f87-089449bcfc86",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "refreshFn",
+                                "fn": "refreshFn",
+                                "designer|params": [
+                                    "plugin"
+                                ],
+                                "implHandler": [
+                                    "console.log(\"Feeds Refreshed\");\r",
+                                    "Ext.getStore('ScheduleDay1').load();\r",
+                                    "Ext.getStore('ScheduleDay2').load();\r",
+                                    "Ext.getStore('ScheduleDay3').load();"
+                                ]
+                            },
+                            "designerId": "fec29263-b940-4d27-94d7-6d18a70f89c4"
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMylistItemTap",
+                        "fn": "onMylistItemTap",
+                        "implHandler": [
+                            "this.up('NavView').push({\r",
+                            "    xtype: 'EventDetailView',\r",
+                            "    extend: 'MyTabPanel2',\r",
+                            "    data: record.data,\r",
+                            "    speakerID: record.data.speaker_id,\r",
+                            "    title: 'Details'\r",
+                            "});"
+                        ],
+                        "name": "itemtap"
+                    },
+                    "designerId": "4ca5f59c-5442-4afa-a51a-71892e64318c"
+                }
+            ]
+        },
+        {
+            "type": "list",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Day 2",
+                "designer|userClassName": "MyList5",
+                "designer|displayName": "Monday",
+                "store": "ScheduleDay2"
+            },
+            "designerId": "d6ea0a4a-6d20-4475-86a4-738b5945d43a",
+            "cn": [
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"padding\">\r",
+                            "    <small><b>{time} - {until}</b></small>\r",
+                            "    <br />\r",
+                            "    <div class=\"agendaTitle\">{title}</div>\r",
+                            "    <small>{location}</small>\r",
+                            "</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "e7a0037e-f779-4e51-bdb7-eab5d9fdecd0"
+                }
+            ]
+        },
+        {
+            "type": "list",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Day 3",
+                "designer|userClassName": "MyList5",
+                "designer|displayName": "Tuesday",
+                "store": "ScheduleDay3"
+            },
+            "designerId": "5b1fb7c4-ac23-4952-a03a-a2925b21b0c9",
+            "cn": [
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"padding\">\r",
+                            "    <small><b>{time} - {until}</b></small>\r",
+                            "    <br />\r",
+                            "    <div class=\"agendaTitle\">{title}</div>\r",
+                            "    <small>{location}</small>\r",
+                            "</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "2bdda036-8933-49fe-bc05-531527e48e88"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTabpanelInitialize",
+                "fn": "onTabpanelInitialize",
+                "implHandler": [
+                    "// Load in the stores\r",
+                    "\r",
+                    "\r",
+                    "//Day 1 (sunday)\r",
+                    "Ext.getStore('ScheduleDay1').load();\r",
+                    "\r",
+                    "\r",
+                    "// Day 2 (monday)\r",
+                    "Ext.getStore('ScheduleDay2').load();\r",
+                    "\r",
+                    "\r",
+                    "//Day 3 (tuesday)\r",
+                    "Ext.getStore('ScheduleDay3').load();\r",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "designerId": "b4876882-7bb1-43ce-80fb-fb8d2dab59b1"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTabpanelShow",
+                "fn": "onTabpanelShow",
+                "implHandler": [
+                    "Ext.getCmp('AskQuestionButton').hide(true);"
+                ],
+                "name": "show"
+            },
+            "designerId": "52568571-d8c0-492a-9b4d-f527b7d064a0"
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EventDetailView",
+        "designer|userAlias": "EventDetailView",
+        "itemId": "EventDetailView",
+        "padding": 10
+    },
+    "id": "ExtBox1-ext-gen9489",
+    "designerId": "e8ceeef2-decc-4e8a-902f-67e537615c43",
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tpl",
+                "implHandler": [
+                    "<large>{title}</large>\r",
+                    "\r",
+                    "<br />\r",
+                    "\r",
+                    "Date: {date:date(\"l, M d Y\")}<br />\r",
+                    "Time: {time} - {until}<br />\r",
+                    "Location: {location}\r",
+                    "\r",
+                    "<div class=\"blue-bar-small\">\r",
+                    "    \r",
+                    "    Description\r",
+                    "    \r",
+                    "</div>\r",
+                    "\r",
+                    "{description}\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "<div class=\"blue-bar-small\">\r",
+                    "    \r",
+                    "    Speakers\r",
+                    "    \r",
+                    "</div>\r",
+                    "<div id=\"speakers-box\">\r",
+                    "<div class=\"spacing\">\r",
+                    "    \r",
+                    "    \r",
+                    "    {speaker_id}\r",
+                    "    \r",
+                    "</div>\r",
+                    "    \r",
+                    "</div>"
+                ],
+                "designer|displayName": "tpl"
+            },
+            "designerId": "dbcd6276-7d84-4514-af30-20e45a0c0858"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onEventDetailViewShow",
+                "fn": "onEventDetailViewShow",
+                "implHandler": [
+                    "//Ext.getCmp('AskQuestionButton').show(true);\r",
+                    "\r",
+                    "\r",
+                    "var record = this.getData();\r",
+                    "\r",
+                    "\r",
+                    "Ext.getCmp('AskQuestionButton').config.EventID = record.id;"
+                ],
+                "name": "show"
+            },
+            "designerId": "c2881c69-c404-41ed-8bc4-33443bd19401"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onEventDetailViewInitialize",
+                "fn": "onEventDetailViewInitialize",
+                "implHandler": [
+                    "Ext.getCmp('AskQuestionButton').show(true);"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "448823e4-2274-49ad-a67a-dba60505c566"
+        }
+    ]
+}

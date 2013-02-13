@@ -1,0 +1,120 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "LocalVenues",
+        "designer|userAlias": "LocalVenues"
+    },
+    "id": "ExtBox1-ext-gen3182",
+    "designerId": "9767561f-334f-4e5f-b4ad-db424c464372",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field40",
+                "name": "id"
+            },
+            "designerId": "d8a669d5-1152-47d1-a188-87bf5908678a"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field41",
+                "name": "title"
+            },
+            "designerId": "776c75d0-89ad-4a56-a41d-b44ec30b2ac7"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field42",
+                "name": "address_1"
+            },
+            "designerId": "16099fcc-5972-470d-bc2f-5055c70922fb"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field43",
+                "name": "address_2"
+            },
+            "designerId": "82e1ea87-01f0-4027-b4bf-578e915b4558"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field44",
+                "name": "postcode"
+            },
+            "designerId": "75b1dfe3-2fc4-4f61-a7fa-380d670dbc2b"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field45",
+                "name": "tel"
+            },
+            "designerId": "ba6f40c3-e768-403e-9246-08917eb49f2f"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field46",
+                "name": "long"
+            },
+            "designerId": "a177fb74-013d-487a-8d44-9d222c732ddc"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field47",
+                "name": "lat"
+            },
+            "designerId": "c9537475-c897-4d44-8b8f-f92da743c622"
+        }
+    ]
+}

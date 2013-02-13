@@ -1,0 +1,94 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SandboxDetails",
+        "designer|userAlias": "SandboxDetails",
+        "padding": 20
+    },
+    "id": "ExtBox1-ext-gen18020",
+    "designerId": "261eb55c-455a-4249-a6e3-3d3142b11c77",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onPanelInitialize",
+                "fn": "onPanelInitialize",
+                "implHandler": [
+                    "var record = this.getData();\r",
+                    "\r",
+                    "\r",
+                    "//Ext.getCmp('SandboxWebButton').setText(record.website);"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "0de25e12-efc8-4d3f-8b1f-139945fde9f2"
+        },
+        {
+            "type": "template",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tpl",
+                "implHandler": [
+                    "<div class=\"blue-text\">{title}</div>\r",
+                    "<small>{info}</small>"
+                ],
+                "designer|displayName": "tpl"
+            },
+            "designerId": "d3353a6b-9ece-4399-af8f-69c692e491d1"
+        },
+        {
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton20",
+                "designer|displayName": "SandboxWebButton",
+                "bottom": "70%",
+                "id": "SandboxWebButton",
+                "itemId": "SandboxWebButton",
+                "margin": "0 0 0 20",
+                "padding": null,
+                "ui": "confirm",
+                "iconAlign": "bottom",
+                "text": "Website"
+            },
+            "designerId": "b40f03f1-29aa-488e-929a-3b71a1ef89c6",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onSandboxWebButtonTap",
+                        "fn": "onSandboxWebButtonTap",
+                        "implHandler": [
+                            "Ext.Msg.alert(\"WIP\", \"External Links function hasn't yet been implemented.\");"
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "55271003-efb3-4bc4-88dd-5bd62627a84b"
+                }
+            ]
+        }
+    ]
+}
