@@ -31,7 +31,8 @@ Ext.application({
         'LocalVenues',
         'SandboxModel',
         'ActivitiesList',
-        'InformationDesk'
+        'InformationDesk',
+        'settingsModel'
     ],
     stores: [
         'CurrentUser',
@@ -47,7 +48,8 @@ Ext.application({
         'SandboxStore',
         'ActivitiesStore',
         'InformationStore',
-        'AttendeesGoogleStore'
+        'AttendeesGoogleStore',
+        'SettingsStore'
     ],
     views: [
         'LoginPanel',

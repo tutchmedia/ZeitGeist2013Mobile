@@ -26,7 +26,7 @@ Ext.define('Google.view.AgendaPanel', {
         items: [
             {
                 xtype: 'list',
-                title: 'Day 1',
+                title: 'Sun',
                 itemId: 'mylist',
                 itemTpl: [
                     '<div class="padding">',
@@ -52,7 +52,7 @@ Ext.define('Google.view.AgendaPanel', {
             },
             {
                 xtype: 'list',
-                title: 'Day 2',
+                title: 'Mon',
                 itemTpl: [
                     '<div class="padding">',
                     '    <small><b>{time} - {until}</b></small>',
@@ -65,7 +65,7 @@ Ext.define('Google.view.AgendaPanel', {
             },
             {
                 xtype: 'list',
-                title: 'Day 3',
+                title: 'Tue',
                 itemTpl: [
                     '<div class="padding">',
                     '    <small><b>{time} - {until}</b></small>',
@@ -123,6 +123,9 @@ Ext.define('Google.view.AgendaPanel', {
 
     onTabpanelShow: function(component, options) {
         Ext.getCmp('AskQuestionButton').hide(true);
+
+
+        Ext.getStore('SettingsStore').load();
     }
 
 });

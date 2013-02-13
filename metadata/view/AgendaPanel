@@ -25,7 +25,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Day 1",
+                "title": "Sun",
                 "badgeText": null,
                 "designer|userClassName": "MyList4",
                 "designer|displayName": "Sunday",
@@ -124,7 +124,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Day 2",
+                "title": "Mon",
                 "designer|userClassName": "MyList5",
                 "designer|displayName": "Monday",
                 "store": "ScheduleDay2"
@@ -162,7 +162,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Day 3",
+                "title": "Tue",
                 "designer|userClassName": "MyList5",
                 "designer|displayName": "Tuesday",
                 "store": "ScheduleDay3"
@@ -233,7 +233,10 @@
                 "designer|userClassName": "onTabpanelShow",
                 "fn": "onTabpanelShow",
                 "implHandler": [
-                    "Ext.getCmp('AskQuestionButton').hide(true);"
+                    "Ext.getCmp('AskQuestionButton').hide(true);\r",
+                    "\r",
+                    "\r",
+                    "Ext.getStore('SettingsStore').load();"
                 ],
                 "name": "show"
             },

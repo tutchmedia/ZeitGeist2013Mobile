@@ -77,7 +77,22 @@ Ext.define('Google.view.EventDetailView', {
     },
 
     onEventDetailViewInitialize: function(component, options) {
-        Ext.getCmp('AskQuestionButton').show(true);
+        var store = Ext.getStore('SettingsStore');
+
+
+        store.load();
+
+        var rec = store.findRecord('id', '1');
+        var value = rec.get('value');
+
+        if(value === '1')
+        {
+            Ext.getCmp('AskQuestionButton').show(true);
+            console.log("Show Question Button");
+        } else {
+            Ext.getCmp('AskQuestionButton').hide(true);
+            console.log("Hide Question Button");
+        }
     }
 
 });

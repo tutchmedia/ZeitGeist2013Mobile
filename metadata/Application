@@ -15,7 +15,8 @@
             "LocalVenues",
             "SandboxModel",
             "ActivitiesList",
-            "InformationDesk"
+            "InformationDesk",
+            "settingsModel"
         ],
         "stores": [
             "CurrentUser",
@@ -31,7 +32,8 @@
             "SandboxStore",
             "ActivitiesStore",
             "InformationStore",
-            "AttendeesGoogleStore"
+            "AttendeesGoogleStore",
+            "SettingsStore"
         ],
         "views": [
             "LoginPanel",

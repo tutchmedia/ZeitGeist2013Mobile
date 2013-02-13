@@ -408,6 +408,22 @@
                 "app/view/AskQuestion.js"
             ],
             "className": "AskQuestion"
+        },
+        "926683f8-625b-4db7-83fc-3e4b7206c0c1": {
+            "paths": [
+                "metadata/store/SettingsStore",
+                "app/store/override/SettingsStore.js",
+                "app/store/SettingsStore.js"
+            ],
+            "className": "SettingsStore"
+        },
+        "aa2fa064-8587-4283-9c32-d2fe39de2f62": {
+            "paths": [
+                "metadata/model/settingsModel",
+                "app/model/override/settingsModel.js",
+                "app/model/settingsModel.js"
+            ],
+            "className": "settingsModel"
         }
     },
     "viewOrderMap": {
@@ -450,7 +466,8 @@
             "035369e5-f98c-458f-88f3-812954039cd4",
             "4d174847-38db-4795-9bee-da19ca2d5224",
             "fe8ca170-1857-4d0d-872d-0c8b9e1219c4",
-            "d71a5807-eed7-4529-ac4f-2e7d493877ab"
+            "d71a5807-eed7-4529-ac4f-2e7d493877ab",
+            "926683f8-625b-4db7-83fc-3e4b7206c0c1"
         ],
         "controller": [],
         "model": [
@@ -462,7 +479,8 @@
             "9767561f-334f-4e5f-b4ad-db424c464372",
             "0e9342da-1b45-42ea-a136-ee405c664d08",
             "d4892005-41e2-41f4-a0fb-159d0cdd350a",
-            "93fd8fa6-3444-4e81-a175-e9927d11f3d0"
+            "93fd8fa6-3444-4e81-a175-e9927d11f3d0",
+            "aa2fa064-8587-4283-9c32-d2fe39de2f62"
         ],
         "resource": [
             "8e8d72e2-1331-4751-89ec-c947cbe4ea49",

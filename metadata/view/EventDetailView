@@ -95,7 +95,22 @@
                 "designer|userClassName": "onEventDetailViewInitialize",
                 "fn": "onEventDetailViewInitialize",
                 "implHandler": [
-                    "Ext.getCmp('AskQuestionButton').show(true);"
+                    "var store = Ext.getStore('SettingsStore');\r",
+                    "\r",
+                    "\r",
+                    "store.load();\r",
+                    "\r",
+                    "var rec = store.findRecord('id', '1');\r",
+                    "var value = rec.get('value');\r",
+                    "\r",
+                    "if(value === '1')\r",
+                    "{\r",
+                    "    Ext.getCmp('AskQuestionButton').show(true);\r",
+                    "    console.log(\"Show Question Button\");\r",
+                    "} else {\r",
+                    "    Ext.getCmp('AskQuestionButton').hide(true);\r",
+                    "    console.log(\"Hide Question Button\");\r",
+                    "}"
                 ],
                 "name": "initialize"
             },
