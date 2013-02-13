@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/2.0"
+        id        = "com.eventsy.google"
+        versionCode="20" 
+        version   = "1.0.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Zeitgeist 2013</name>
+
+    <description>
+        Zeitgeist 2013 Main Application.
+    </description>
+
+    <author href="https://eventsy.co.uk" email="support@eventsy.co.uk">
+        Craig Turner
+    </author>
+
+    <preference name="orientation" value="portrait" />
+
+    <preference name="prerendered-icon" value="true" />
+
+    <preference name="show-splash-screen-spinner" value="false" />
+
+    <icon src="icon.png" />
+
+    <gap:splash src="splash.png" />
+
+    <gap:splash src="splash/ios/splash_2x.png" width="640" height="960" />
+
+    <preference name="stay-in-webview" value="false" />
+
+    <access origin="*" />
+
+</widget>

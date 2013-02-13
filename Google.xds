@@ -1,0 +1,477 @@
+{
+    "name": "Google",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "E:\\DOWNLOADS\\sencha-touch-2.1.0-commercial",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 678,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "touch21",
+    "topInstanceFileMap": {
+        "8e8d72e2-1331-4751-89ec-c947cbe4ea49": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "4ec17169-74e6-4d90-9ec5-5a8cae818b92": {
+            "paths": [
+                "metadata/view/LoginPanel",
+                "app/view/override/LoginPanel.js",
+                "app/view/LoginPanel.js"
+            ],
+            "className": "LoginPanel"
+        },
+        "07c11dc8-0e50-4698-8cf2-8983ce430cd0": {
+            "paths": [
+                "metadata/view/Dashboard",
+                "app/view/override/Dashboard.js",
+                "app/view/Dashboard.js"
+            ],
+            "className": "Dashboard"
+        },
+        "bb7a91ec-ac7f-4927-93f5-1ce91a06851b": {
+            "paths": [
+                "metadata/view/NavView",
+                "app/view/override/NavView.js",
+                "app/view/NavView.js"
+            ],
+            "className": "NavView"
+        },
+        "87857352-821d-46f3-a56e-a76dffa93f99": {
+            "paths": [
+                "metadata/store/CurrentUser",
+                "app/store/override/CurrentUser.js",
+                "app/store/CurrentUser.js"
+            ],
+            "className": "CurrentUser"
+        },
+        "0624c708-fa79-4bad-b8d6-b7b90342444d": {
+            "paths": [
+                "metadata/model/CurrentUser",
+                "app/model/override/CurrentUser.js",
+                "app/model/CurrentUser.js"
+            ],
+            "className": "CurrentUser"
+        },
+        "1e83974a-819b-48b9-8835-8267fa37fa1d": {
+            "paths": [
+                "metadata/view/SettingsPanel",
+                "app/view/override/SettingsPanel.js",
+                "app/view/SettingsPanel.js"
+            ],
+            "className": "SettingsPanel"
+        },
+        "35170c56-2447-4866-8872-d8c2dfcb7272": {
+            "paths": [
+                "metadata/store/MessageStore",
+                "app/store/override/MessageStore.js",
+                "app/store/MessageStore.js"
+            ],
+            "className": "MessageStore"
+        },
+        "0fcf74ae-7235-4dfc-b9be-60d531e47546": {
+            "paths": [
+                "metadata/model/MessageList",
+                "app/model/override/MessageList.js",
+                "app/model/MessageList.js"
+            ],
+            "className": "MessageList"
+        },
+        "e3d685f3-bafa-4147-ad6d-f4d7d9c1a4e8": {
+            "paths": [
+                "metadata/view/ComposePanel",
+                "app/view/override/ComposePanel.js",
+                "app/view/ComposePanel.js"
+            ],
+            "className": "ComposePanel"
+        },
+        "61ec8fcd-a72a-4f12-891a-1cbf49262bd4": {
+            "paths": [
+                "metadata/view/AgendaPanel",
+                "app/view/override/AgendaPanel.js",
+                "app/view/AgendaPanel.js"
+            ],
+            "className": "AgendaPanel"
+        },
+        "bf77493f-5beb-4144-bb62-c9009b22565a": {
+            "paths": [
+                "metadata/view/AttendeesPanel",
+                "app/view/override/AttendeesPanel.js",
+                "app/view/AttendeesPanel.js"
+            ],
+            "className": "AttendeesPanel"
+        },
+        "e2205195-bcd1-4e56-a8d8-707582d10776": {
+            "paths": [
+                "metadata/store/AttendeesWebStore",
+                "app/store/override/AttendeesWebStore.js",
+                "app/store/AttendeesWebStore.js"
+            ],
+            "className": "AttendeesWebStore"
+        },
+        "3fce8b3c-7b4d-465b-a419-5cf42946d14a": {
+            "paths": [
+                "metadata/model/AttendeesList",
+                "app/model/override/AttendeesList.js",
+                "app/model/AttendeesList.js"
+            ],
+            "className": "AttendeesList"
+        },
+        "3117c92a-b5fe-4f71-9013-af8ff1f95a7d": {
+            "paths": [
+                "metadata/store/AttendeesLocalStore",
+                "app/store/override/AttendeesLocalStore.js",
+                "app/store/AttendeesLocalStore.js"
+            ],
+            "className": "AttendeesLocalStore"
+        },
+        "a82b147b-da16-4e0a-9214-b1a233a94225": {
+            "paths": [
+                "metadata/view/MyDataItem",
+                "app/view/override/MyDataItem.js",
+                "app/view/MyDataItem.js"
+            ],
+            "className": "MyDataItem"
+        },
+        "0d377e6a-edb2-4cd9-ae04-7c6a2a480bef": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "ddb70fa1-62d3-4536-a33c-6331cb9a0d71": {
+            "paths": [
+                "metadata/view/readMessage",
+                "app/view/override/readMessage.js",
+                "app/view/readMessage.js"
+            ],
+            "className": "readMessage"
+        },
+        "86b92bed-5c40-4294-818f-f4adef18c3ac": {
+            "paths": [
+                "metadata/store/MessageRead",
+                "app/store/override/MessageRead.js",
+                "app/store/MessageRead.js"
+            ],
+            "className": "MessageRead"
+        },
+        "10abf6e3-699f-4380-85ba-e8c75f8fc2d7": {
+            "paths": [
+                "metadata/view/MessagePanel",
+                "app/view/override/MessagePanel.js",
+                "app/view/MessagePanel.js"
+            ],
+            "className": "MessagePanel"
+        },
+        "c61e74f1-316e-49fa-b6e3-bdc3921fd768": {
+            "paths": [
+                "metadata/resource/packager",
+                "",
+                "packager.json"
+            ],
+            "className": "packager"
+        },
+        "c9ea9293-5e91-4478-8de2-77fcadc0b367": {
+            "paths": [
+                "metadata/model/Schedule",
+                "app/model/override/Schedule.js",
+                "app/model/Schedule.js"
+            ],
+            "className": "Schedule"
+        },
+        "72116118-f2ae-4553-94c6-db4cbcbc02c5": {
+            "paths": [
+                "metadata/store/ScheduleDay1",
+                "app/store/override/ScheduleDay1.js",
+                "app/store/ScheduleDay1.js"
+            ],
+            "className": "ScheduleDay1"
+        },
+        "fcd692fa-f108-4ef4-858a-097b474ef0c0": {
+            "paths": [
+                "metadata/store/ScheduleDay2",
+                "app/store/override/ScheduleDay2.js",
+                "app/store/ScheduleDay2.js"
+            ],
+            "className": "ScheduleDay2"
+        },
+        "21f3e28f-c6c6-425d-977a-9f5d1f4ed3b7": {
+            "paths": [
+                "metadata/store/ScheduleDay3",
+                "app/store/override/ScheduleDay3.js",
+                "app/store/ScheduleDay3.js"
+            ],
+            "className": "ScheduleDay3"
+        },
+        "e8ceeef2-decc-4e8a-902f-67e537615c43": {
+            "paths": [
+                "metadata/view/EventDetailView",
+                "app/view/override/EventDetailView.js",
+                "app/view/EventDetailView.js"
+            ],
+            "className": "EventDetailView"
+        },
+        "cede0bf8-9bed-4f2c-af65-e979bc14fb7e": {
+            "paths": [
+                "metadata/view/SpeakersList",
+                "app/view/override/SpeakersList.js",
+                "app/view/SpeakersList.js"
+            ],
+            "className": "SpeakersList"
+        },
+        "2fcbaee4-3396-4ba4-9124-a8b6fd3e3923": {
+            "paths": [
+                "metadata/store/SpeakersStore",
+                "app/store/override/SpeakersStore.js",
+                "app/store/SpeakersStore.js"
+            ],
+            "className": "SpeakersStore"
+        },
+        "bbc7a808-a949-42b8-9639-4444fcfa3b01": {
+            "paths": [
+                "metadata/model/SpeakersList",
+                "app/model/override/SpeakersList.js",
+                "app/model/SpeakersList.js"
+            ],
+            "className": "SpeakersList"
+        },
+        "cd47005a-b279-4618-8a23-90007b809f56": {
+            "paths": [
+                "metadata/view/VenueList",
+                "app/view/override/VenueList.js",
+                "app/view/VenueList.js"
+            ],
+            "className": "VenueList"
+        },
+        "035369e5-f98c-458f-88f3-812954039cd4": {
+            "paths": [
+                "metadata/store/LocalVenues",
+                "app/store/override/LocalVenues.js",
+                "app/store/LocalVenues.js"
+            ],
+            "className": "LocalVenues"
+        },
+        "9767561f-334f-4e5f-b4ad-db424c464372": {
+            "paths": [
+                "metadata/model/LocalVenues",
+                "app/model/override/LocalVenues.js",
+                "app/model/LocalVenues.js"
+            ],
+            "className": "LocalVenues"
+        },
+        "a4df516a-7120-40cf-ba15-33c356efca60": {
+            "paths": [
+                "metadata/view/VenueDetailView",
+                "app/view/override/VenueDetailView.js",
+                "app/view/VenueDetailView.js"
+            ],
+            "className": "VenueDetailView"
+        },
+        "08612fa7-317b-46a5-bf67-0dceb770892c": {
+            "paths": [
+                "metadata/resource/GoogleMapsAPI"
+            ],
+            "className": "GoogleMapsAPI"
+        },
+        "239e5d0d-f22f-413b-9f4b-31bd3f5b3f08": {
+            "paths": [
+                "metadata/view/CreativeList",
+                "app/view/override/CreativeList.js",
+                "app/view/CreativeList.js"
+            ],
+            "className": "CreativeList"
+        },
+        "4d174847-38db-4795-9bee-da19ca2d5224": {
+            "paths": [
+                "metadata/store/SandboxStore",
+                "app/store/override/SandboxStore.js",
+                "app/store/SandboxStore.js"
+            ],
+            "className": "SandboxStore"
+        },
+        "0e9342da-1b45-42ea-a136-ee405c664d08": {
+            "paths": [
+                "metadata/model/SandboxModel",
+                "app/model/override/SandboxModel.js",
+                "app/model/SandboxModel.js"
+            ],
+            "className": "SandboxModel"
+        },
+        "261eb55c-455a-4249-a6e3-3d3142b11c77": {
+            "paths": [
+                "metadata/view/SandboxDetails",
+                "app/view/override/SandboxDetails.js",
+                "app/view/SandboxDetails.js"
+            ],
+            "className": "SandboxDetails"
+        },
+        "9e5e61a7-317a-4584-9d56-411ce63b4d8c": {
+            "paths": [
+                "metadata/view/ActivitiesPanel",
+                "app/view/override/ActivitiesPanel.js",
+                "app/view/ActivitiesPanel.js"
+            ],
+            "className": "ActivitiesPanel"
+        },
+        "fe8ca170-1857-4d0d-872d-0c8b9e1219c4": {
+            "paths": [
+                "metadata/store/ActivitiesStore",
+                "app/store/override/ActivitiesStore.js",
+                "app/store/ActivitiesStore.js"
+            ],
+            "className": "ActivitiesStore"
+        },
+        "d4892005-41e2-41f4-a0fb-159d0cdd350a": {
+            "paths": [
+                "metadata/model/ActivitiesList",
+                "app/model/override/ActivitiesList.js",
+                "app/model/ActivitiesList.js"
+            ],
+            "className": "ActivitiesList"
+        },
+        "4ffdc823-5cec-4377-9578-e524ea8a8d14": {
+            "paths": [
+                "metadata/view/ActivityPanel",
+                "app/view/override/ActivityPanel.js",
+                "app/view/ActivityPanel.js"
+            ],
+            "className": "ActivityPanel"
+        },
+        "d71a5807-eed7-4529-ac4f-2e7d493877ab": {
+            "paths": [
+                "metadata/store/InformationStore",
+                "app/store/override/InformationStore.js",
+                "app/store/InformationStore.js"
+            ],
+            "className": "InformationStore"
+        },
+        "93fd8fa6-3444-4e81-a175-e9927d11f3d0": {
+            "paths": [
+                "metadata/model/InformationDesk",
+                "app/model/override/InformationDesk.js",
+                "app/model/InformationDesk.js"
+            ],
+            "className": "InformationDesk"
+        },
+        "a6a42e31-1517-4f98-ad3f-753028ac517b": {
+            "paths": [
+                "metadata/view/InformationDesk",
+                "app/view/override/InformationDesk.js",
+                "app/view/InformationDesk.js"
+            ],
+            "className": "InformationDesk"
+        },
+        "b9bda3ea-08aa-4add-a12e-fe3f752b3e9d": {
+            "paths": [
+                "metadata/view/InfoPanel",
+                "app/view/override/InfoPanel.js",
+                "app/view/InfoPanel.js"
+            ],
+            "className": "InfoPanel"
+        },
+        "6b5cf843-dec0-4c5e-b4d7-bf87077d3c42": {
+            "paths": [
+                "metadata/view/ProfileDetails",
+                "app/view/override/ProfileDetails.js",
+                "app/view/ProfileDetails.js"
+            ],
+            "className": "ProfileDetails"
+        },
+        "330f7386-2876-422d-8964-68c01483b7c8": {
+            "paths": [
+                "metadata/view/MyDataItem1",
+                "app/view/override/MyDataItem1.js",
+                "app/view/MyDataItem1.js"
+            ],
+            "className": "MyDataItem1"
+        },
+        "353ce4f0-86e4-439f-84bb-4ee13968ff39": {
+            "paths": [
+                "metadata/store/AttendeesGoogleStore",
+                "app/store/override/AttendeesGoogleStore.js",
+                "app/store/AttendeesGoogleStore.js"
+            ],
+            "className": "AttendeesGoogleStore"
+        },
+        "1a4fb171-81e6-457f-88a0-04adb521d214": {
+            "paths": [
+                "metadata/view/AskQuestion",
+                "app/view/override/AskQuestion.js",
+                "app/view/AskQuestion.js"
+            ],
+            "className": "AskQuestion"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "4ec17169-74e6-4d90-9ec5-5a8cae818b92",
+            "bb7a91ec-ac7f-4927-93f5-1ce91a06851b",
+            "07c11dc8-0e50-4698-8cf2-8983ce430cd0",
+            "1e83974a-819b-48b9-8835-8267fa37fa1d",
+            "10abf6e3-699f-4380-85ba-e8c75f8fc2d7",
+            "e3d685f3-bafa-4147-ad6d-f4d7d9c1a4e8",
+            "ddb70fa1-62d3-4536-a33c-6331cb9a0d71",
+            "61ec8fcd-a72a-4f12-891a-1cbf49262bd4",
+            "bf77493f-5beb-4144-bb62-c9009b22565a",
+            "a82b147b-da16-4e0a-9214-b1a233a94225",
+            "330f7386-2876-422d-8964-68c01483b7c8",
+            "e8ceeef2-decc-4e8a-902f-67e537615c43",
+            "cede0bf8-9bed-4f2c-af65-e979bc14fb7e",
+            "cd47005a-b279-4618-8a23-90007b809f56",
+            "a4df516a-7120-40cf-ba15-33c356efca60",
+            "239e5d0d-f22f-413b-9f4b-31bd3f5b3f08",
+            "261eb55c-455a-4249-a6e3-3d3142b11c77",
+            "9e5e61a7-317a-4584-9d56-411ce63b4d8c",
+            "4ffdc823-5cec-4377-9578-e524ea8a8d14",
+            "a6a42e31-1517-4f98-ad3f-753028ac517b",
+            "b9bda3ea-08aa-4add-a12e-fe3f752b3e9d",
+            "6b5cf843-dec0-4c5e-b4d7-bf87077d3c42",
+            "1a4fb171-81e6-457f-88a0-04adb521d214"
+        ],
+        "store": [
+            "87857352-821d-46f3-a56e-a76dffa93f99",
+            "35170c56-2447-4866-8872-d8c2dfcb7272",
+            "86b92bed-5c40-4294-818f-f4adef18c3ac",
+            "e2205195-bcd1-4e56-a8d8-707582d10776",
+            "353ce4f0-86e4-439f-84bb-4ee13968ff39",
+            "3117c92a-b5fe-4f71-9013-af8ff1f95a7d",
+            "72116118-f2ae-4553-94c6-db4cbcbc02c5",
+            "fcd692fa-f108-4ef4-858a-097b474ef0c0",
+            "21f3e28f-c6c6-425d-977a-9f5d1f4ed3b7",
+            "2fcbaee4-3396-4ba4-9124-a8b6fd3e3923",
+            "035369e5-f98c-458f-88f3-812954039cd4",
+            "4d174847-38db-4795-9bee-da19ca2d5224",
+            "fe8ca170-1857-4d0d-872d-0c8b9e1219c4",
+            "d71a5807-eed7-4529-ac4f-2e7d493877ab"
+        ],
+        "controller": [],
+        "model": [
+            "0624c708-fa79-4bad-b8d6-b7b90342444d",
+            "0fcf74ae-7235-4dfc-b9be-60d531e47546",
+            "3fce8b3c-7b4d-465b-a419-5cf42946d14a",
+            "c9ea9293-5e91-4478-8de2-77fcadc0b367",
+            "bbc7a808-a949-42b8-9639-4444fcfa3b01",
+            "9767561f-334f-4e5f-b4ad-db424c464372",
+            "0e9342da-1b45-42ea-a136-ee405c664d08",
+            "d4892005-41e2-41f4-a0fb-159d0cdd350a",
+            "93fd8fa6-3444-4e81-a175-e9927d11f3d0"
+        ],
+        "resource": [
+            "8e8d72e2-1331-4751-89ec-c947cbe4ea49",
+            "0d377e6a-edb2-4cd9-ae04-7c6a2a480bef",
+            "c61e74f1-316e-49fa-b6e3-bdc3921fd768",
+            "08612fa7-317b-46a5-bf67-0dceb770892c"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
