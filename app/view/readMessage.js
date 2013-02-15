@@ -136,6 +136,12 @@ Ext.define('Google.view.readMessage', {
         //This is where the view will scroll to the end of the messages.
 
 
+
+
+
+
+
+
     },
 
     onMybuttonTap1: function(button, e, options) {
@@ -213,8 +219,22 @@ Ext.define('Google.view.readMessage', {
 
 
 
+        // Contact the web server and make as read
 
 
+        this.submit({
+            url: 'http://api.eventsy.co.uk/setMessage.php?c_id='+ c_id +'&number=1',
+            method: 'GET',
+            success: function(response) {
+                // do whatever you need to with the generated HTML
+                console.log("Sent request to server to clear read receipt" + c_id);
+                Ext.getStore('MessageRead').load();
+            },
+            failure: function(response){
+                // Do failure message
+                console.warn("Server request didn't work "+ c_id);
+            }
+        });
     },
 
     onTest1Show: function(component, options) {

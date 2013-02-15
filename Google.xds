@@ -424,6 +424,22 @@
                 "app/model/settingsModel.js"
             ],
             "className": "settingsModel"
+        },
+        "ac28d495-ffef-42e3-8d84-a6cb7a7b8a0e": {
+            "paths": [
+                "metadata/store/CheckMessageStore",
+                "app/store/override/CheckMessageStore.js",
+                "app/store/CheckMessageStore.js"
+            ],
+            "className": "CheckMessageStore"
+        },
+        "1244121e-070a-4a0b-a048-2a46a74bf93d": {
+            "paths": [
+                "metadata/model/CheckMessages",
+                "app/model/override/CheckMessages.js",
+                "app/model/CheckMessages.js"
+            ],
+            "className": "CheckMessages"
         }
     },
     "viewOrderMap": {
@@ -467,7 +483,8 @@
             "4d174847-38db-4795-9bee-da19ca2d5224",
             "fe8ca170-1857-4d0d-872d-0c8b9e1219c4",
             "d71a5807-eed7-4529-ac4f-2e7d493877ab",
-            "926683f8-625b-4db7-83fc-3e4b7206c0c1"
+            "926683f8-625b-4db7-83fc-3e4b7206c0c1",
+            "ac28d495-ffef-42e3-8d84-a6cb7a7b8a0e"
         ],
         "controller": [],
         "model": [
@@ -480,7 +497,8 @@
             "0e9342da-1b45-42ea-a136-ee405c664d08",
             "d4892005-41e2-41f4-a0fb-159d0cdd350a",
             "93fd8fa6-3444-4e81-a175-e9927d11f3d0",
-            "aa2fa064-8587-4283-9c32-d2fe39de2f62"
+            "aa2fa064-8587-4283-9c32-d2fe39de2f62",
+            "1244121e-070a-4a0b-a048-2a46a74bf93d"
         ],
         "resource": [
             "8e8d72e2-1331-4751-89ec-c947cbe4ea49",

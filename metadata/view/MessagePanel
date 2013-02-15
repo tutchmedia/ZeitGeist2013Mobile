@@ -49,9 +49,13 @@
                             "<div style=\"height:50px;\">\r",
                             "    <div style=\"float:left; width:90%; \">\r",
                             "    {username}<br />\r",
-                            "        <small>{date:date(\"d-m-Y\")}</small>\r",
+                            "        <small>{date:date(\"M d,Y H:i\")}</small>\r",
                             "    </div>\r",
-                            "    <div class=\"receipt\" style=\"float:right; width:10%; vertical-align:50px;\">!</div>\r",
+                            "    <tpl if=\"receipt == 0\">\r",
+                            "        <div class=\"receipt\" style=\"float:right; width:10%; vertical-align:50px;\">\r",
+                            "            <div style=\"background-color:red; color:white; padding:5px; width:inherit; border-radius:3px; text-align:center;\">!</div>        \r",
+                            "        </div>\r",
+                            "    </tpl>\r",
                             "</div>"
                         ],
                         "designer|displayName": "itemTpl"
@@ -197,7 +201,6 @@
                 "fn": "onTabpanelShow",
                 "implHandler": [
                     "//Ext.ComponentQuery.query('NavView')[0].getNavigationBar().add({xtype:'button',align:'right', iconCls: 'compose', iconMask: true, name: 'composeButton', id: 'composeButton', itemId: 'composeButton', ui: 'confirm', autoDestroy: false});\r",
-                    "\r",
                     "\r",
                     ""
                 ],

@@ -37,6 +37,7 @@
             "userConfig": {
                 "designer|userClassName": "MyNavigationBar",
                 "designer|displayName": "Google",
+                "height": null,
                 "style": "background-color:#000;"
             },
             "designerId": "748ecb42-3732-43ab-a6d9-ab972b187d00",

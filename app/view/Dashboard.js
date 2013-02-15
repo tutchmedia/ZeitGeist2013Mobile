@@ -113,22 +113,57 @@ Ext.define('Google.view.Dashboard', {
                         xtype: 'button',
                         cls: 'thingsButton',
                         height: 75,
-                        itemId: 'mybutton9',
+                        itemId: 'messageButton',
                         margin: '15 10 10 10',
                         style: 'float:left',
                         width: '26%',
                         listeners: [
                             {
                                 fn: function(component, options) {
-                                    var messages = 1;
+                                    // Show the message counter stuff
 
-                                    // Set the amount of new messages
-                                    if(messages == 0)
-                                    {
-                                        this.setBadgeText('0');
-                                    } else {
-                                        this.setBadgeText('!');
-                                    }
+
+                                    var store = Ext.getStore('CurrentUser');
+
+                                    store.load();
+                                    var rec = store.findRecord('id', '1');
+                                    user_id = rec.get('user_id'); // get the allowMessages toggle value
+
+
+                                    Ext.getStore('CheckMessageStore').getProxy().setExtraParams({
+                                        'key':'123',
+                                        'receipt':'true',
+                                        'u_id':user_id
+                                    });
+
+                                    Ext.getStore('CheckMessageStore').load();
+
+                                    //this.getStore('SpeakerProfilesSearch').getProxy().setExtraParam('agendaspeaker', '1,2');
+
+                                    console.log("Check Message Store Loaded.");
+
+
+
+
+
+                                    Ext.Ajax.request({
+                                        url: 'http://api.eventsy.co.uk/CheckMessageRead.php?u_id='+user_id,
+                                        method: 'GET',
+                                        success: function(response) {
+                                            // do whatever you need to with the generated HTML
+                                            if(response.responseText != 0)
+                                            {
+                                                component.setBadgeText(response.responseText);
+                                            } else {
+                                                component.setBadgeText('0'); 
+                                            }
+
+                                        },
+                                        failure: function(response){
+                                            // Do failure message
+                                            console.warn("Failed!");
+                                        }
+                                    });
                                 },
                                 event: 'initialize'
                             }
@@ -190,7 +225,7 @@ Ext.define('Google.view.Dashboard', {
             {
                 fn: 'onMybutton9Tap',
                 event: 'tap',
-                delegate: '#mybutton9'
+                delegate: '#messageButton'
             },
             {
                 fn: 'onDashboardShow',
@@ -301,6 +336,9 @@ Ext.define('Google.view.Dashboard', {
 
         //Ext.getCmp('MessageButton').hide(true);
         Ext.getCmp('SettingsButton').hide(true);
+
+
+
     },
 
     onDashboardShow: function(component, options) {
@@ -394,6 +432,9 @@ Ext.define('Google.view.Dashboard', {
                 //Google.app.switchMainView('Google.view.LoginPanel');
             }
         });
+
+
+
     }
 
 });

@@ -16,7 +16,8 @@
             "SandboxModel",
             "ActivitiesList",
             "InformationDesk",
-            "settingsModel"
+            "settingsModel",
+            "CheckMessages"
         ],
         "stores": [
             "CurrentUser",
@@ -33,7 +34,8 @@
             "ActivitiesStore",
             "InformationStore",
             "AttendeesGoogleStore",
-            "SettingsStore"
+            "SettingsStore",
+            "CheckMessageStore"
         ],
         "views": [
             "LoginPanel",

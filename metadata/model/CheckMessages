@@ -1,0 +1,28 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CheckMessages"
+    },
+    "id": "ExtBox1-ext-gen28357",
+    "designerId": "1244121e-070a-4a0b-a048-2a46a74bf93d",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field68",
+                "name": "receipt"
+            },
+            "designerId": "5464b8ec-085a-47a5-9905-6ffa1608263b"
+        }
+    ]
+}

@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/2.0"
         id        = "com.eventsy.google"
         versionCode="20" 
-        version   = "1.0.0">
+        version   = "1.0">
 
     <!-- versionCode is optional and Android only -->
 

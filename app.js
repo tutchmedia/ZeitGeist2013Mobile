@@ -32,7 +32,8 @@ Ext.application({
         'SandboxModel',
         'ActivitiesList',
         'InformationDesk',
-        'settingsModel'
+        'settingsModel',
+        'CheckMessages'
     ],
     stores: [
         'CurrentUser',
@@ -49,7 +50,8 @@ Ext.application({
         'ActivitiesStore',
         'InformationStore',
         'AttendeesGoogleStore',
-        'SettingsStore'
+        'SettingsStore',
+        'CheckMessageStore'
     ],
     views: [
         'LoginPanel',

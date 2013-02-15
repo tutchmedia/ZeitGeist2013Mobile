@@ -35,9 +35,13 @@ Ext.define('Google.view.MessagePanel', {
                     '<div style="height:50px;">',
                     '    <div style="float:left; width:90%; ">',
                     '    {username}<br />',
-                    '        <small>{date:date("d-m-Y")}</small>',
+                    '        <small>{date:date("M d,Y H:i")}</small>',
                     '    </div>',
-                    '    <div class="receipt" style="float:right; width:10%; vertical-align:50px;">!</div>',
+                    '    <tpl if="receipt == 0">',
+                    '        <div class="receipt" style="float:right; width:10%; vertical-align:50px;">',
+                    '            <div style="background-color:red; color:white; padding:5px; width:inherit; border-radius:3px; text-align:center;">!</div>        ',
+                    '        </div>',
+                    '    </tpl>',
                     '</div>'
                 ],
                 store: 'MessageStore'
@@ -130,7 +134,6 @@ Ext.define('Google.view.MessagePanel', {
 
     onTabpanelShow: function(component, options) {
         //Ext.ComponentQuery.query('NavView')[0].getNavigationBar().add({xtype:'button',align:'right', iconCls: 'compose', iconMask: true, name: 'composeButton', id: 'composeButton', itemId: 'composeButton', ui: 'confirm', autoDestroy: false});
-
 
 
     }

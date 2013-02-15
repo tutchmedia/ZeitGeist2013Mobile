@@ -149,6 +149,12 @@
                         "implHandler": [
                             "//This is where the view will scroll to the end of the messages.\r",
                             "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "\r",
                             ""
                         ],
                         "name": "show"
@@ -366,8 +372,22 @@
                     "\r",
                     "\r",
                     "\r",
+                    "// Contact the web server and make as read\r",
                     "\r",
-                    ""
+                    "\r",
+                    "this.submit({\r",
+                    "        url: 'http://api.eventsy.co.uk/setMessage.php?c_id='+ c_id +'&number=1',\r",
+                    "        method: 'GET',\r",
+                    "        success: function(response) {\r",
+                    "            // do whatever you need to with the generated HTML\r",
+                    "            console.log(\"Sent request to server to clear read receipt\" + c_id);\r",
+                    "            Ext.getStore('MessageRead').load();\r",
+                    "        },\r",
+                    "        failure: function(response){\r",
+                    "            // Do failure message\r",
+                    "            console.warn(\"Server request didn't work \"+ c_id);\r",
+                    "        }\r",
+                    "    });"
                 ],
                 "name": "initialize"
             },
