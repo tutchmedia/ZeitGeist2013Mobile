@@ -181,6 +181,7 @@ Ext.define('Google.view.Dashboard', {
             },
             {
                 xtype: 'container',
+                hidden: true,
                 html: 'v1.1',
                 padding: '0 0 0 5',
                 style: 'font-size:8px;'

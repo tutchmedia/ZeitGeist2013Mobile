@@ -8,15 +8,17 @@ a:hover {
 }
 
 .agendaButton {
-    background-image: url("images/phone/agenda.png") !important;
+    background-image: url("images/phone/agenda.jpg") !important;
+    background-repeat:no-repeat;
     height:150px;
     width:150px;
     float:left;
     margin-bottom:20px;
     background-color:#fff !important;
+    text-align:center;
 }
 .attendeeButton {
-    background-image: url("images/phone/attendees.png") !important;
+    background-image: url("images/phone/attendees.jpg") !important;
     background-repeat: no-repeat;
     height:150px;
     width:150px;
@@ -27,7 +29,8 @@ a:hover {
 }
 
 .speakersButton {
-    background-image: url("images/phone/speakers.png") !important;
+    background-image: url("images/phone/speakers.jpg") !important;
+    background-repeat:no-repeat;
     height:150px;
     width:150px;
     float:left;
@@ -39,7 +42,8 @@ a:hover {
 
 
 .venuesButton {
-    background-image: url("images/phone/venues.png") !important;
+    background-image: url("images/phone/venues.jpg") !important;
+    background-repeat:no-repeat;
     height:150px;
     width:150px;
     float:left;
@@ -49,7 +53,8 @@ a:hover {
 }
 
 .sandboxButton {
-    background-image: url("images/phone/sandbox.png") !important;
+    background-image: url("images/phone/sandbox.jpg") !important;
+    background-repeat:no-repeat;
     height:150px;
     width:150px;
     float:left;
@@ -60,7 +65,8 @@ a:hover {
 }
 
 .activitiesButton {
-    background-image: url("images/phone/activities.png") !important;
+    background-image: url("images/phone/activities.jpg") !important;
+    background-repeat:no-repeat;
     height:150px;
     width:150px;
     float:left;
@@ -71,7 +77,8 @@ a:hover {
 }
 
 .infoButton {
-    background-image: url("images/phone/infobooth.png") !important;
+    background-image: url("images/phone/infobooth.jpg") !important;
+    background-repeat:no-repeat;
     height:150px;
     width:150px;
     float:left;
@@ -83,7 +90,9 @@ a:hover {
 /* Swap these back over */
 
 .thingsButton {
-    background-image: url("images/phone/message.png") !important;
+    background-image: url("images/phone/message.jpg") !important;
+    background-repeat:no-repeat;
+    text-align:center;
     height:150px;
     width:150px;
     float:left;
@@ -94,7 +103,8 @@ a:hover {
 }
 
 .googleButton {
-    background-image: url("images/phone/gplus.png") !important;
+    background-image: url("images/phone/gplus.jpg") !important;
+    background-repeat:no-repeat;
     height:150px;
     width:150px;
     float:left;
@@ -426,4 +436,13 @@ large {
 }
 .x-button-back, .x-toolbar .x-button-back {
     margin-left:0 !important;
+}
+.x-hasbadge .x-badge {
+    color:#ffffff !important;
+    background:none !important;
+    right:13px !important;
+    top: 4px !important;
+    border:none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
 }

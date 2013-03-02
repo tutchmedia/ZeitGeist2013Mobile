@@ -4,7 +4,7 @@
         "model": false,
         "component": true,
         "controller": true,
-        "resource": false,
+        "resource": true,
         "4ec17169-74e6-4d90-9ec5-5a8cae818b92": {
             "id": "4ec17169-74e6-4d90-9ec5-5a8cae818b92",
             "expanded": false,
@@ -78,7 +78,6 @@
         },
         "07c11dc8-0e50-4698-8cf2-8983ce430cd0": {
             "id": "07c11dc8-0e50-4698-8cf2-8983ce430cd0",
-            "expanded": false,
             "cn": [
                 {
                     "id": "ad68f217-4b13-4674-a46e-0ca1ed0c37cd",
@@ -217,6 +216,7 @@
         },
         "10abf6e3-699f-4380-85ba-e8c75f8fc2d7": {
             "id": "10abf6e3-699f-4380-85ba-e8c75f8fc2d7",
+            "expanded": false,
             "cn": [
                 {
                     "id": "774ca507-e731-4d22-97b1-7be9d6bbbc28",
