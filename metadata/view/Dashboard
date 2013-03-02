@@ -486,23 +486,23 @@
                                     "\r",
                                     "\r",
                                     "Ext.Ajax.request({\r",
-                                    "        url: 'http://api.eventsy.co.uk/CheckMessageRead.php?u_id='+user_id,\r",
-                                    "        method: 'GET',\r",
-                                    "        success: function(response) {\r",
-                                    "            // do whatever you need to with the generated HTML\r",
-                                    "            if(response.responseText != 0)\r",
-                                    "            {\r",
-                                    "                component.setBadgeText(response.responseText);\r",
-                                    "            } else {\r",
-                                    "                component.setBadgeText('0'); \r",
-                                    "            }\r",
-                                    "            \r",
-                                    "        },\r",
-                                    "        failure: function(response){\r",
-                                    "            // Do failure message\r",
-                                    "            console.warn(\"Failed!\");\r",
+                                    "    url: 'http://api.eventsy.co.uk/CheckMessageRead.php?u_id='+user_id,\r",
+                                    "    method: 'GET',\r",
+                                    "    success: function(response) {\r",
+                                    "        // do whatever you need to with the generated HTML\r",
+                                    "        if(response.responseText != 0)\r",
+                                    "        {\r",
+                                    "            component.setBadgeText(response.responseText);\r",
+                                    "        } else {\r",
+                                    "            component.setBadgeText('0'); \r",
                                     "        }\r",
-                                    "    });"
+                                    "\r",
+                                    "    },\r",
+                                    "    failure: function(response){\r",
+                                    "        // Do failure message\r",
+                                    "        console.warn(\"Failed!\");\r",
+                                    "    }\r",
+                                    "});"
                                 ],
                                 "name": "initialize"
                             },
@@ -521,12 +521,34 @@
                         "designer|userClassName": "MyButton5",
                         "cls": "googleButton",
                         "height": 75,
+                        "itemId": "mybutton10",
                         "margin": "15 10 10 10",
                         "style": "float:left",
                         "width": "26%",
                         "text": null
                     },
-                    "designerId": "1814c871-9b5f-42d0-8a75-0d0d88b0954d"
+                    "designerId": "1814c871-9b5f-42d0-8a75-0d0d88b0954d",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onMybutton10Tap",
+                                "fn": "onMybutton10Tap",
+                                "implHandler": [
+                                    "url = \"https://plus.google.com/u/0/communities/111456497275016012144\";\r",
+                                    "\r",
+                                    "window.open(url);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "f881bf0f-81cf-4cca-b426-39f312092dcd"
+                        }
+                    ]
                 }
             ]
         },

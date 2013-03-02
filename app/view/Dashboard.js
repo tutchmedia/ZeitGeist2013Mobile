@@ -173,6 +173,7 @@ Ext.define('Google.view.Dashboard', {
                         xtype: 'button',
                         cls: 'googleButton',
                         height: 75,
+                        itemId: 'mybutton10',
                         margin: '15 10 10 10',
                         style: 'float:left',
                         width: '26%'
@@ -227,6 +228,11 @@ Ext.define('Google.view.Dashboard', {
                 fn: 'onMybutton9Tap',
                 event: 'tap',
                 delegate: '#messageButton'
+            },
+            {
+                fn: 'onMybutton10Tap',
+                event: 'tap',
+                delegate: '#mybutton10'
             },
             {
                 fn: 'onDashboardShow',
@@ -340,6 +346,12 @@ Ext.define('Google.view.Dashboard', {
 
 
 
+    },
+
+    onMybutton10Tap: function(button, e, options) {
+        url = "https://plus.google.com/u/0/communities/111456497275016012144";
+
+        window.open(url);
     },
 
     onDashboardShow: function(component, options) {
